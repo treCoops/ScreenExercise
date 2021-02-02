@@ -1,0 +1,972 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EFA9BF0ADB4EB595D5EF253519BE5B6 /* Pods-ScreenExercise-ScreenExerciseUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE4BCCC75F0C0D13AFC4D082643AE369 /* Pods-ScreenExercise-ScreenExerciseUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DE63FEDAEA7896D5E36C1C8FE7CB7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		446344D3831531A83419B08EE3C55764 /* Pods-ScreenExercise-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B4B855636F1A18DF76EB902AB221842 /* Pods-ScreenExercise-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6250F7369C72F4D5C37651B62EDA9E54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A78BF6B03DED20C609704AE7C949C04 /* iOSDropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2DBD197BF8C4A95CF11BB10B92F671 /* iOSDropDown.swift */; };
+		7FE19AA95D6BE0F5803CF4685A444413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		82589261931BEA4F11E81D6361BDA5C0 /* Pods-ScreenExerciseTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D35FCC61E38638A6E3E87761049EBC5 /* Pods-ScreenExerciseTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 562E1B0CB7AF0F74F35EBD9B634DF54D /* iOSDropDown-dummy.m */; };
+		C9980BB2C99EC955BAB7D09899FACBE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		D0204FFE5B38FBC531D8DF965D2A14BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		DA72E161D4419DA9F408D7704A4CF251 /* Pods-ScreenExercise-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0866B0CAC397F6E23E52E95013D114 /* Pods-ScreenExercise-dummy.m */; };
+		F5ADF78FE0D16FBDD5EC2F7C8B73D71B /* Pods-ScreenExerciseTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7D305B433EE705BCDD8B91EF8CA26C /* Pods-ScreenExerciseTests-dummy.m */; };
+		FE7317F15E8293B70A377817E76C1E27 /* Pods-ScreenExercise-ScreenExerciseUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77E1E3940C93171DB068F3CA561DC /* Pods-ScreenExercise-ScreenExerciseUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A20092E48E71BA1B851D81414AEEE00E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C76CE6CD60B1CE55A174F03CC59AE17;
+			remoteInfo = iOSDropDown;
+		};
+		ADAFFF7C8BCAC7BF7AD474D37B8AF2E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE4CD7D49ECDCA612D1965E0BA71ED80;
+			remoteInfo = "Pods-ScreenExercise";
+		};
+		E835E1209D4CDACDB8D75754AB8BC512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C76CE6CD60B1CE55A174F03CC59AE17;
+			remoteInfo = iOSDropDown;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F2027902322A8F56CE664B19D652FE /* Pods_ScreenExercise_ScreenExerciseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenExercise_ScreenExerciseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A78BF6B03DED20C609704AE7C949C04 /* iOSDropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-umbrella.h"; sourceTree = "<group>"; };
+		2290FD236B7C2072628390FA0CE76D72 /* Pods-ScreenExercise-ScreenExerciseUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ScreenExercise-ScreenExerciseUITests.modulemap"; sourceTree = "<group>"; };
+		24D5F794A4AAD3E3F895D08B6C319393 /* Pods-ScreenExercise-ScreenExerciseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScreenExercise-ScreenExerciseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2982282F791CB4A31AC9DFA3BEF67A82 /* Pods-ScreenExerciseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScreenExerciseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2EEFB3404310006E64EC3A8257D43579 /* Pods-ScreenExercise-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScreenExercise-acknowledgements.plist"; sourceTree = "<group>"; };
+		3173870E03EF904660E309290387EA74 /* Pods-ScreenExercise-ScreenExerciseUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScreenExercise-ScreenExerciseUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3D35FCC61E38638A6E3E87761049EBC5 /* Pods-ScreenExerciseTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ScreenExerciseTests-umbrella.h"; sourceTree = "<group>"; };
+		4A2DBD197BF8C4A95CF11BB10B92F671 /* iOSDropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iOSDropDown.swift; path = iOSDropDown/Classes/iOSDropDown.swift; sourceTree = "<group>"; };
+		4B4B855636F1A18DF76EB902AB221842 /* Pods-ScreenExercise-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ScreenExercise-umbrella.h"; sourceTree = "<group>"; };
+		55C77E1E3940C93171DB068F3CA561DC /* Pods-ScreenExercise-ScreenExerciseUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ScreenExercise-ScreenExerciseUITests-dummy.m"; sourceTree = "<group>"; };
+		562E1B0CB7AF0F74F35EBD9B634DF54D /* iOSDropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDropDown-dummy.m"; sourceTree = "<group>"; };
+		56BFC4321B93C872E596AB52F08E1F87 /* Pods_ScreenExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9861B0F4628A400F2DDB37680CB088 /* Pods-ScreenExercise.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ScreenExercise.modulemap"; sourceTree = "<group>"; };
+		5FE3FAAF89E5C3D34984F3CC7E26E179 /* iOSDropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDropDown-Info.plist"; sourceTree = "<group>"; };
+		66620A9DD0FDA46D893BF03560438942 /* Pods-ScreenExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScreenExercise.release.xcconfig"; sourceTree = "<group>"; };
+		66EDB6B669149A495CF464E2E35DCE0A /* Pods-ScreenExercise-ScreenExerciseUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScreenExercise-ScreenExerciseUITests-Info.plist"; sourceTree = "<group>"; };
+		783EA7371AEAA00EFE8774A2242FD37C /* Pods-ScreenExerciseTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ScreenExerciseTests.modulemap"; sourceTree = "<group>"; };
+		943EFD5BB78BA47D75DC6F62C7A87475 /* Pods-ScreenExercise-ScreenExerciseUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ScreenExercise-ScreenExerciseUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4CEF791D0E127C30624A1A28D4109FE /* Pods-ScreenExerciseTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScreenExerciseTests-Info.plist"; sourceTree = "<group>"; };
+		A9C80BADA9709CD7D7902C0E7C99A076 /* Pods-ScreenExerciseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScreenExerciseTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB8904700A7AAFBDC524A889DFA47B38 /* Pods-ScreenExercise-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScreenExercise-Info.plist"; sourceTree = "<group>"; };
+		AD8B8A20AB7ED3888713C54735A4D292 /* Pods-ScreenExercise-ScreenExerciseUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ScreenExercise-ScreenExerciseUITests-frameworks.sh"; sourceTree = "<group>"; };
+		B95F0792DF6339E9F7DB75BB154189E8 /* Pods_ScreenExerciseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScreenExerciseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7DA775A5828C45732A30596CAD3FF4 /* Pods-ScreenExerciseTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ScreenExerciseTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BB0866B0CAC397F6E23E52E95013D114 /* Pods-ScreenExercise-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ScreenExercise-dummy.m"; sourceTree = "<group>"; };
+		BC7D305B433EE705BCDD8B91EF8CA26C /* Pods-ScreenExerciseTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ScreenExerciseTests-dummy.m"; sourceTree = "<group>"; };
+		BF58B08E2E4F30F24A42E1F63F109E96 /* iOSDropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.release.xcconfig; sourceTree = "<group>"; };
+		C6A203E22246BADE78D1981895E516AA /* iOSDropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDropDown.debug.xcconfig; sourceTree = "<group>"; };
+		CE3ED87F7068633AE65BE4E61FB7F3FC /* Pods-ScreenExerciseTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScreenExerciseTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D12799C3024238351392BC5F40EB63A6 /* Pods-ScreenExercise-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ScreenExercise-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D50D9066DF8C03BFB75396C376966185 /* Pods-ScreenExercise-ScreenExerciseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScreenExercise-ScreenExerciseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD1117F610E4CF3593EFAA9395A5B14D /* Pods-ScreenExercise-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ScreenExercise-frameworks.sh"; sourceTree = "<group>"; };
+		DE4BCCC75F0C0D13AFC4D082643AE369 /* Pods-ScreenExercise-ScreenExerciseUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ScreenExercise-ScreenExerciseUITests-umbrella.h"; sourceTree = "<group>"; };
+		E394704805E5E41C40BC600EC788AF71 /* iOSDropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDropDown.modulemap; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EE0F6BDAFA9C3525B88D61582B90D9AC /* Pods-ScreenExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScreenExercise.debug.xcconfig"; sourceTree = "<group>"; };
+		F7C0E7D451DF09B403F4E7B1E4343892 /* iOSDropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDropDown-prefix.pch"; sourceTree = "<group>"; };
+		FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C8BFE14A48845D4AA084DCBFFD3160F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FE19AA95D6BE0F5803CF4685A444413 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25DF5A9AC595EB65396B0F7FD3EC355F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE63FEDAEA7896D5E36C1C8FE7CB7D1 /* Foundation.framework in Frameworks */,
+				C9980BB2C99EC955BAB7D09899FACBE6 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B12F15C84D052D0682BE6EA1403D498 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6250F7369C72F4D5C37651B62EDA9E54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B643ABF2B688C48C9D05CCAC84D0634 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0204FFE5B38FBC531D8DF965D2A14BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		134345830E544D8185B56170D6240A54 /* Pods-ScreenExerciseTests */ = {
+			isa = PBXGroup;
+			children = (
+				783EA7371AEAA00EFE8774A2242FD37C /* Pods-ScreenExerciseTests.modulemap */,
+				BA7DA775A5828C45732A30596CAD3FF4 /* Pods-ScreenExerciseTests-acknowledgements.markdown */,
+				CE3ED87F7068633AE65BE4E61FB7F3FC /* Pods-ScreenExerciseTests-acknowledgements.plist */,
+				BC7D305B433EE705BCDD8B91EF8CA26C /* Pods-ScreenExerciseTests-dummy.m */,
+				A4CEF791D0E127C30624A1A28D4109FE /* Pods-ScreenExerciseTests-Info.plist */,
+				3D35FCC61E38638A6E3E87761049EBC5 /* Pods-ScreenExerciseTests-umbrella.h */,
+				2982282F791CB4A31AC9DFA3BEF67A82 /* Pods-ScreenExerciseTests.debug.xcconfig */,
+				A9C80BADA9709CD7D7902C0E7C99A076 /* Pods-ScreenExerciseTests.release.xcconfig */,
+			);
+			name = "Pods-ScreenExerciseTests";
+			path = "Target Support Files/Pods-ScreenExerciseTests";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4304240AA3F97B8DA63732BED71C92CD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E394704805E5E41C40BC600EC788AF71 /* iOSDropDown.modulemap */,
+				562E1B0CB7AF0F74F35EBD9B634DF54D /* iOSDropDown-dummy.m */,
+				5FE3FAAF89E5C3D34984F3CC7E26E179 /* iOSDropDown-Info.plist */,
+				F7C0E7D451DF09B403F4E7B1E4343892 /* iOSDropDown-prefix.pch */,
+				1A78BF6B03DED20C609704AE7C949C04 /* iOSDropDown-umbrella.h */,
+				C6A203E22246BADE78D1981895E516AA /* iOSDropDown.debug.xcconfig */,
+				BF58B08E2E4F30F24A42E1F63F109E96 /* iOSDropDown.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOSDropDown";
+			sourceTree = "<group>";
+		};
+		4BBF5AF206107EE9C2BD55B0DA5E7374 /* Pods-ScreenExercise-ScreenExerciseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2290FD236B7C2072628390FA0CE76D72 /* Pods-ScreenExercise-ScreenExerciseUITests.modulemap */,
+				943EFD5BB78BA47D75DC6F62C7A87475 /* Pods-ScreenExercise-ScreenExerciseUITests-acknowledgements.markdown */,
+				3173870E03EF904660E309290387EA74 /* Pods-ScreenExercise-ScreenExerciseUITests-acknowledgements.plist */,
+				55C77E1E3940C93171DB068F3CA561DC /* Pods-ScreenExercise-ScreenExerciseUITests-dummy.m */,
+				AD8B8A20AB7ED3888713C54735A4D292 /* Pods-ScreenExercise-ScreenExerciseUITests-frameworks.sh */,
+				66EDB6B669149A495CF464E2E35DCE0A /* Pods-ScreenExercise-ScreenExerciseUITests-Info.plist */,
+				DE4BCCC75F0C0D13AFC4D082643AE369 /* Pods-ScreenExercise-ScreenExerciseUITests-umbrella.h */,
+				D50D9066DF8C03BFB75396C376966185 /* Pods-ScreenExercise-ScreenExerciseUITests.debug.xcconfig */,
+				24D5F794A4AAD3E3F895D08B6C319393 /* Pods-ScreenExercise-ScreenExerciseUITests.release.xcconfig */,
+			);
+			name = "Pods-ScreenExercise-ScreenExerciseUITests";
+			path = "Target Support Files/Pods-ScreenExercise-ScreenExerciseUITests";
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5A66458106A81D56BB24FFC3953C6CBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */,
+				56BFC4321B93C872E596AB52F08E1F87 /* Pods_ScreenExercise.framework */,
+				07F2027902322A8F56CE664B19D652FE /* Pods_ScreenExercise_ScreenExerciseUITests.framework */,
+				B95F0792DF6339E9F7DB75BB154189E8 /* Pods_ScreenExerciseTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60E09F58A4B6EF1F34AC349248B764C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3D57C222983B3ACBD29F20BAE9203E6 /* iOSDropDown */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		99227033B3A05D0A07357B25FCEDBDBC /* Pods-ScreenExercise */ = {
+			isa = PBXGroup;
+			children = (
+				5B9861B0F4628A400F2DDB37680CB088 /* Pods-ScreenExercise.modulemap */,
+				D12799C3024238351392BC5F40EB63A6 /* Pods-ScreenExercise-acknowledgements.markdown */,
+				2EEFB3404310006E64EC3A8257D43579 /* Pods-ScreenExercise-acknowledgements.plist */,
+				BB0866B0CAC397F6E23E52E95013D114 /* Pods-ScreenExercise-dummy.m */,
+				DD1117F610E4CF3593EFAA9395A5B14D /* Pods-ScreenExercise-frameworks.sh */,
+				AB8904700A7AAFBDC524A889DFA47B38 /* Pods-ScreenExercise-Info.plist */,
+				4B4B855636F1A18DF76EB902AB221842 /* Pods-ScreenExercise-umbrella.h */,
+				EE0F6BDAFA9C3525B88D61582B90D9AC /* Pods-ScreenExercise.debug.xcconfig */,
+				66620A9DD0FDA46D893BF03560438942 /* Pods-ScreenExercise.release.xcconfig */,
+			);
+			name = "Pods-ScreenExercise";
+			path = "Target Support Files/Pods-ScreenExercise";
+			sourceTree = "<group>";
+		};
+		A3D57C222983B3ACBD29F20BAE9203E6 /* iOSDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				4A2DBD197BF8C4A95CF11BB10B92F671 /* iOSDropDown.swift */,
+				4304240AA3F97B8DA63732BED71C92CD /* Support Files */,
+			);
+			path = iOSDropDown;
+			sourceTree = "<group>";
+		};
+		B8FFEF5B32A7F971CFB04E07F45245A3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99227033B3A05D0A07357B25FCEDBDBC /* Pods-ScreenExercise */,
+				4BBF5AF206107EE9C2BD55B0DA5E7374 /* Pods-ScreenExercise-ScreenExerciseUITests */,
+				134345830E544D8185B56170D6240A54 /* Pods-ScreenExerciseTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				60E09F58A4B6EF1F34AC349248B764C0 /* Pods */,
+				5A66458106A81D56BB24FFC3953C6CBF /* Products */,
+				B8FFEF5B32A7F971CFB04E07F45245A3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		49A335C134FCF2F924CEF41C8BE5E181 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFA9BF0ADB4EB595D5EF253519BE5B6 /* Pods-ScreenExercise-ScreenExerciseUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8441A10AE0BE6293EF53E7D9F3A319EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82589261931BEA4F11E81D6361BDA5C0 /* Pods-ScreenExerciseTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93A905842D7F38038C5AE524E9DF7789 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6762724102132C861217B911E70056ED /* iOSDropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C973ECDF02F054ADEC1692E8C9AAC6A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				446344D3831531A83419B08EE3C55764 /* Pods-ScreenExercise-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A476A331E996DC82BDA1CD0E8A43F8B6 /* Build configuration list for PBXNativeTarget "iOSDropDown" */;
+			buildPhases = (
+				93A905842D7F38038C5AE524E9DF7789 /* Headers */,
+				51ADBD82176C61B9136F2C18746D6E55 /* Sources */,
+				25DF5A9AC595EB65396B0F7FD3EC355F /* Frameworks */,
+				4F2761F0F0D962265232D9EE899A184E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSDropDown;
+			productName = iOSDropDown;
+			productReference = FCEEA8BBD9DA8D0CCE0A3092B20E3FA7 /* iOSDropDown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7778B26E1FD79CD96085CB42E8706116 /* Pods-ScreenExercise-ScreenExerciseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB09AD2944915BA9B60DADC9A13CBAA /* Build configuration list for PBXNativeTarget "Pods-ScreenExercise-ScreenExerciseUITests" */;
+			buildPhases = (
+				49A335C134FCF2F924CEF41C8BE5E181 /* Headers */,
+				DF980CDEAF3F4A0E70A32ACC29AA0013 /* Sources */,
+				8B12F15C84D052D0682BE6EA1403D498 /* Frameworks */,
+				FEC1A693CF802A615E3990F1EDC64D87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F33B8B01CE28B7557414416A397265B0 /* PBXTargetDependency */,
+			);
+			name = "Pods-ScreenExercise-ScreenExerciseUITests";
+			productName = "Pods-ScreenExercise-ScreenExerciseUITests";
+			productReference = 07F2027902322A8F56CE664B19D652FE /* Pods_ScreenExercise_ScreenExerciseUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE4CD7D49ECDCA612D1965E0BA71ED80 /* Pods-ScreenExercise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D953306354AFAEBE6C1473F463A00D2 /* Build configuration list for PBXNativeTarget "Pods-ScreenExercise" */;
+			buildPhases = (
+				C973ECDF02F054ADEC1692E8C9AAC6A2 /* Headers */,
+				50A2838B05D96849D6B5C8296BD3B641 /* Sources */,
+				0C8BFE14A48845D4AA084DCBFFD3160F /* Frameworks */,
+				442582AAE57243584AA05FB54BDAC76C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				884BB047E825EEE4EED938851D2800D6 /* PBXTargetDependency */,
+			);
+			name = "Pods-ScreenExercise";
+			productName = "Pods-ScreenExercise";
+			productReference = 56BFC4321B93C872E596AB52F08E1F87 /* Pods_ScreenExercise.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F0958864BD76D7C5DE11BA066E106403 /* Pods-ScreenExerciseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A3EAC16DB3CD2713AD1E2AFACA85762 /* Build configuration list for PBXNativeTarget "Pods-ScreenExerciseTests" */;
+			buildPhases = (
+				8441A10AE0BE6293EF53E7D9F3A319EA /* Headers */,
+				C05DF190BD8E3A6FB2B74E34F2273D99 /* Sources */,
+				9B643ABF2B688C48C9D05CCAC84D0634 /* Frameworks */,
+				1C67FB3834A000430B349E4243356013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7D73E498EB3AB2B562F1F1BCFDB2BF9 /* PBXTargetDependency */,
+			);
+			name = "Pods-ScreenExerciseTests";
+			productName = "Pods-ScreenExerciseTests";
+			productReference = B95F0792DF6339E9F7DB75BB154189E8 /* Pods_ScreenExerciseTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					3C76CE6CD60B1CE55A174F03CC59AE17 = {
+						LastSwiftMigration = 1230;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5A66458106A81D56BB24FFC3953C6CBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */,
+				BE4CD7D49ECDCA612D1965E0BA71ED80 /* Pods-ScreenExercise */,
+				7778B26E1FD79CD96085CB42E8706116 /* Pods-ScreenExercise-ScreenExerciseUITests */,
+				F0958864BD76D7C5DE11BA066E106403 /* Pods-ScreenExerciseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C67FB3834A000430B349E4243356013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		442582AAE57243584AA05FB54BDAC76C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F2761F0F0D962265232D9EE899A184E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEC1A693CF802A615E3990F1EDC64D87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50A2838B05D96849D6B5C8296BD3B641 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA72E161D4419DA9F408D7704A4CF251 /* Pods-ScreenExercise-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51ADBD82176C61B9136F2C18746D6E55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C312131E6526BFB7C1CB92D93D58FCC7 /* iOSDropDown-dummy.m in Sources */,
+				6ADFB626C34AA35AC883469526699F8D /* iOSDropDown.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C05DF190BD8E3A6FB2B74E34F2273D99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5ADF78FE0D16FBDD5EC2F7C8B73D71B /* Pods-ScreenExerciseTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF980CDEAF3F4A0E70A32ACC29AA0013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE7317F15E8293B70A377817E76C1E27 /* Pods-ScreenExercise-ScreenExerciseUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		884BB047E825EEE4EED938851D2800D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDropDown;
+			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
+			targetProxy = E835E1209D4CDACDB8D75754AB8BC512 /* PBXContainerItemProxy */;
+		};
+		E7D73E498EB3AB2B562F1F1BCFDB2BF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ScreenExercise";
+			target = BE4CD7D49ECDCA612D1965E0BA71ED80 /* Pods-ScreenExercise */;
+			targetProxy = ADAFFF7C8BCAC7BF7AD474D37B8AF2E1 /* PBXContainerItemProxy */;
+		};
+		F33B8B01CE28B7557414416A397265B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDropDown;
+			target = 3C76CE6CD60B1CE55A174F03CC59AE17 /* iOSDropDown */;
+			targetProxy = A20092E48E71BA1B851D81414AEEE00E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		125C51B0F88E28C868DC90BD45E4E727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1C3C6569059BB94BDFCCA4C9F4C40DE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24D5F794A4AAD3E3F895D08B6C319393 /* Pods-ScreenExercise-ScreenExerciseUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ScreenExercise-ScreenExerciseUITests/Pods-ScreenExercise-ScreenExerciseUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScreenExercise-ScreenExerciseUITests/Pods-ScreenExercise-ScreenExerciseUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		33EE21E4239678779EFF21BFB3C5B37F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF58B08E2E4F30F24A42E1F63F109E96 /* iOSDropDown.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDropDown/iOSDropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDropDown/iOSDropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iOSDropDown/iOSDropDown.modulemap";
+				PRODUCT_MODULE_NAME = iOSDropDown;
+				PRODUCT_NAME = iOSDropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3CDF25A44469FBF7642E07F71206DF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2982282F791CB4A31AC9DFA3BEF67A82 /* Pods-ScreenExerciseTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ScreenExerciseTests/Pods-ScreenExerciseTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScreenExerciseTests/Pods-ScreenExerciseTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		40FA2EEBE2E55735938BB2FCBD83D35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6A203E22246BADE78D1981895E516AA /* iOSDropDown.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDropDown/iOSDropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDropDown/iOSDropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iOSDropDown/iOSDropDown.modulemap";
+				PRODUCT_MODULE_NAME = iOSDropDown;
+				PRODUCT_NAME = iOSDropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92A3E9AC052A7345115439021B218E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		AE748113E20BAE1F03BC0E9D2DB85688 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66620A9DD0FDA46D893BF03560438942 /* Pods-ScreenExercise.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ScreenExercise/Pods-ScreenExercise-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScreenExercise/Pods-ScreenExercise.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B343E5B24410567D0502D1248E5A6E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D50D9066DF8C03BFB75396C376966185 /* Pods-ScreenExercise-ScreenExerciseUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ScreenExercise-ScreenExerciseUITests/Pods-ScreenExercise-ScreenExerciseUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScreenExercise-ScreenExerciseUITests/Pods-ScreenExercise-ScreenExerciseUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DADE68CD5A6A02601BFB20B1B2CDA888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0F6BDAFA9C3525B88D61582B90D9AC /* Pods-ScreenExercise.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ScreenExercise/Pods-ScreenExercise-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScreenExercise/Pods-ScreenExercise.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DAFDCD34D1340DBE260403427C75ACC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9C80BADA9709CD7D7902C0E7C99A076 /* Pods-ScreenExerciseTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ScreenExerciseTests/Pods-ScreenExerciseTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScreenExerciseTests/Pods-ScreenExerciseTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A3EAC16DB3CD2713AD1E2AFACA85762 /* Build configuration list for PBXNativeTarget "Pods-ScreenExerciseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CDF25A44469FBF7642E07F71206DF4E /* Debug */,
+				DAFDCD34D1340DBE260403427C75ACC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				125C51B0F88E28C868DC90BD45E4E727 /* Debug */,
+				92A3E9AC052A7345115439021B218E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB09AD2944915BA9B60DADC9A13CBAA /* Build configuration list for PBXNativeTarget "Pods-ScreenExercise-ScreenExerciseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B343E5B24410567D0502D1248E5A6E4F /* Debug */,
+				1C3C6569059BB94BDFCCA4C9F4C40DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D953306354AFAEBE6C1473F463A00D2 /* Build configuration list for PBXNativeTarget "Pods-ScreenExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DADE68CD5A6A02601BFB20B1B2CDA888 /* Debug */,
+				AE748113E20BAE1F03BC0E9D2DB85688 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A476A331E996DC82BDA1CD0E8A43F8B6 /* Build configuration list for PBXNativeTarget "iOSDropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40FA2EEBE2E55735938BB2FCBD83D35F /* Debug */,
+				33EE21E4239678779EFF21BFB3C5B37F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
