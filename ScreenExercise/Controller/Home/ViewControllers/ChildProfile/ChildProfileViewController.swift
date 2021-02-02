@@ -47,7 +47,16 @@ extension ChildProfileViewController : UITableViewDelegate, UITableViewDataSourc
             cell.alpha = 1
         })
         
+        
+        
+        let clearView = UIView()
+        UIView().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().selectedBackgroundView = clearView
+        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         performSegue(withIdentifier: "ChildProfileItemSegue", sender: self)
+    }
 }

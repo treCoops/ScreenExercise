@@ -65,6 +65,10 @@ class SelectActivityTwoViewController: UIViewController {
             flowLayout.estimatedItemSize = CGSize(width: 4, height: 4)
         }
     }
+    
+    @IBAction func btnBackPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension SelectActivityTwoViewController : UICollectionViewDataSource {
@@ -83,7 +87,7 @@ extension SelectActivityTwoViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
+        performSegue(withIdentifier: "SpecificActivitySegue", sender: self)
     }
     
 }
@@ -138,4 +142,11 @@ extension SelectActivityTwoViewController : UITableViewDelegate, UITableViewData
                
                return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         performSegue(withIdentifier: "ViewFromSelectActivityTwoSegue", sender: self)
+    }
+    
+    
 }

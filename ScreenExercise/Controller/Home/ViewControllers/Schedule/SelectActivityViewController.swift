@@ -59,6 +59,10 @@ class SelectActivityViewController: UIViewController {
         }
     }
     
+    @IBAction func btnBackPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
 }
 
@@ -79,8 +83,12 @@ extension SelectActivityViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
+        
+        performSegue(withIdentifier: "ActivitySegue", sender: self)
+        
     }
+    
+   
     
 }
 
@@ -115,6 +123,8 @@ extension SelectActivityViewController : UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
        }
     
+    
+    
 }
 
 
@@ -134,5 +144,9 @@ extension SelectActivityViewController : UITableViewDelegate, UITableViewDataSou
                })
                
                return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         performSegue(withIdentifier: "ViewFromSelectActivitySegue", sender: self)
     }
 }

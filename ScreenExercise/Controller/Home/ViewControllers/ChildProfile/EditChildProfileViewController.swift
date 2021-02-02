@@ -1,14 +1,13 @@
 //
-//  AddChildProfileViewController.swift
+//  EditChildProfileViewController.swift
 //  ScreenExercise
 //
-//  Created by treCoops on 2021-01-27.
+//  Created by treCoops on 2021-02-02.
 //
 
 import UIKit
-import DLRadioButton
 
-class AddChildProfileViewController: UIViewController {
+class EditChildProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +23,8 @@ class AddChildProfileViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
-    @IBAction func rdnRadioButtonSelected(_ sender: DLRadioButton) {
-        
+    @IBAction func onDeleteChildProfilePressed(_ sender: UIButton) {
+        PopupDialogViewController.showPopup(parentVC: self, from: "EDITCHILD")
     }
+    
 }

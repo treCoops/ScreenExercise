@@ -15,5 +15,8 @@ class ActivityViewController: UIViewController {
    
         
     }
-
+    @IBAction func btnBackPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

@@ -1,14 +1,13 @@
 //
-//  AddChildProfileViewController.swift
+//  ViewChildProfileViewController.swift
 //  ScreenExercise
 //
-//  Created by treCoops on 2021-01-27.
+//  Created by treCoops on 2021-02-02.
 //
 
 import UIKit
-import DLRadioButton
 
-class AddChildProfileViewController: UIViewController {
+class ViewChildProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +22,5 @@ class AddChildProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-
-    @IBAction func rdnRadioButtonSelected(_ sender: DLRadioButton) {
-        
-    }
+    
 }

@@ -18,6 +18,13 @@
 		2633C21D25C1230A002C6E58 /* ChildProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C21B25C1230A002C6E58 /* ChildProfileTableViewCell.swift */; };
 		2633C21E25C1230A002C6E58 /* ChildProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2633C21C25C1230A002C6E58 /* ChildProfileTableViewCell.xib */; };
 		2633C22625C14398002C6E58 /* AddChildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C22525C14398002C6E58 /* AddChildProfileViewController.swift */; };
+		2633C27C25C9A472002C6E58 /* ViewChildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C27B25C9A472002C6E58 /* ViewChildProfileViewController.swift */; };
+		2633C28125C9A904002C6E58 /* EditChildProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C28025C9A904002C6E58 /* EditChildProfileViewController.swift */; };
+		2633C28625C9ABB4002C6E58 /* PopupDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C28525C9ABB4002C6E58 /* PopupDialogViewController.swift */; };
+		2633C29125C9B9D7002C6E58 /* CustomActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C29025C9B9D7002C6E58 /* CustomActivityViewController.swift */; };
+		2633C29625C9BB54002C6E58 /* CreateActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C29525C9BB54002C6E58 /* CreateActivityViewController.swift */; };
+		2633C29D25C9BF5B002C6E58 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C29C25C9BF5B002C6E58 /* SettingViewController.swift */; };
+		2633C2A525C9C278002C6E58 /* UserRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2633C2A425C9C278002C6E58 /* UserRegistrationViewController.swift */; };
 		26465CED25AD5469001EAC1B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26465CEC25AD5469001EAC1B /* Home.storyboard */; };
 		26465CF325AD60D7001EAC1B /* HomeUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26465CF225AD60D7001EAC1B /* HomeUITabBarController.swift */; };
 		26465D0425AD699D001EAC1B /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26465D0325AD699D001EAC1B /* ScheduleViewController.swift */; };
@@ -102,6 +109,13 @@
 		2633C21B25C1230A002C6E58 /* ChildProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileTableViewCell.swift; sourceTree = "<group>"; };
 		2633C21C25C1230A002C6E58 /* ChildProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildProfileTableViewCell.xib; sourceTree = "<group>"; };
 		2633C22525C14398002C6E58 /* AddChildProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildProfileViewController.swift; sourceTree = "<group>"; };
+		2633C27B25C9A472002C6E58 /* ViewChildProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewChildProfileViewController.swift; sourceTree = "<group>"; };
+		2633C28025C9A904002C6E58 /* EditChildProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChildProfileViewController.swift; sourceTree = "<group>"; };
+		2633C28525C9ABB4002C6E58 /* PopupDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDialogViewController.swift; sourceTree = "<group>"; };
+		2633C29025C9B9D7002C6E58 /* CustomActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityViewController.swift; sourceTree = "<group>"; };
+		2633C29525C9BB54002C6E58 /* CreateActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityViewController.swift; sourceTree = "<group>"; };
+		2633C29C25C9BF5B002C6E58 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		2633C2A425C9C278002C6E58 /* UserRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewController.swift; sourceTree = "<group>"; };
 		26465CEC25AD5469001EAC1B /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		26465CF225AD60D7001EAC1B /* HomeUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITabBarController.swift; sourceTree = "<group>"; };
 		26465D0325AD699D001EAC1B /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +262,8 @@
 			children = (
 				2633C20E25C11D81002C6E58 /* ChildProfileViewController.swift */,
 				2633C22525C14398002C6E58 /* AddChildProfileViewController.swift */,
+				2633C27B25C9A472002C6E58 /* ViewChildProfileViewController.swift */,
+				2633C28025C9A904002C6E58 /* EditChildProfileViewController.swift */,
 			);
 			path = ChildProfile;
 			sourceTree = "<group>";
@@ -258,6 +274,14 @@
 				2633C21C25C1230A002C6E58 /* ChildProfileTableViewCell.xib */,
 			);
 			path = ChildProfile;
+			sourceTree = "<group>";
+		};
+		2633C29A25C9BF48002C6E58 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				2633C29C25C9BF5B002C6E58 /* SettingViewController.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		26465CF125AD608D001EAC1B /* Home */ = {
@@ -273,9 +297,11 @@
 		26465D0225AD6979001EAC1B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2633C29A25C9BF48002C6E58 /* Setting */,
 				2633C20C25C11D46002C6E58 /* ChildProfile */,
 				2633C1EC25BFDB5D002C6E58 /* Leaderboard */,
 				26842BA125AEB6CE00241F03 /* Schedule */,
+				2633C28525C9ABB4002C6E58 /* PopupDialogViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -377,6 +403,7 @@
 				268216D625AC1CF500E6FF1F /* PhoneNumberViewController.swift */,
 				268216DE25AC1D0400E6FF1F /* OTPViewController.swift */,
 				2682170D25AC370300E6FF1F /* PaymentViewController.swift */,
+				2633C2A425C9C278002C6E58 /* UserRegistrationViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -389,6 +416,8 @@
 				26842BA325AEB71600241F03 /* SelectActivityViewController.swift */,
 				26842BF125B1509E00241F03 /* SelectActivityTwoViewController.swift */,
 				26842C0525B1632A00241F03 /* ActivityViewController.swift */,
+				2633C29025C9B9D7002C6E58 /* CustomActivityViewController.swift */,
+				2633C29525C9BB54002C6E58 /* CreateActivityViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -794,19 +823,26 @@
 				267F391C25BE9E0D00D2B396 /* EventHandler.swift in Sources */,
 				26842C0125B1557000241F03 /* XIBCategoryTwo.swift in Sources */,
 				26842BF825B1550600241F03 /* CategoryTwoCollectionViewCell.swift in Sources */,
+				2633C29D25C9BF5B002C6E58 /* SettingViewController.swift in Sources */,
 				268216D725AC1CF500E6FF1F /* PhoneNumberViewController.swift in Sources */,
 				26842BB825AEC2F200241F03 /* CategoryCollectionViewCell.swift in Sources */,
 				2633C21725C122CD002C6E58 /* XIBChildProfile.swift in Sources */,
+				2633C29125C9B9D7002C6E58 /* CustomActivityViewController.swift in Sources */,
+				2633C29625C9BB54002C6E58 /* CreateActivityViewController.swift in Sources */,
 				26F1631525AC090E00B25F59 /* SceneDelegate.swift in Sources */,
 				26465D0C25AD6B3D001EAC1B /* RoundedImageView.swift in Sources */,
 				260B14E325B7EB950032F30A /* NotificationManager.swift in Sources */,
 				26465CF325AD60D7001EAC1B /* HomeUITabBarController.swift in Sources */,
+				2633C27C25C9A472002C6E58 /* ViewChildProfileViewController.swift in Sources */,
 				2633C21D25C1230A002C6E58 /* ChildProfileTableViewCell.swift in Sources */,
 				26842BA425AEB71600241F03 /* SelectActivityViewController.swift in Sources */,
+				2633C28125C9A904002C6E58 /* EditChildProfileViewController.swift in Sources */,
 				26842C0625B1632A00241F03 /* ActivityViewController.swift in Sources */,
 				26465D0425AD699D001EAC1B /* ScheduleViewController.swift in Sources */,
 				26842BAC25AEBAB100241F03 /* SearchUIView.swift in Sources */,
+				2633C2A525C9C278002C6E58 /* UserRegistrationViewController.swift in Sources */,
 				26842BB125AEBCD200241F03 /* CustomTextFieldPlaceholder.swift in Sources */,
+				2633C28625C9ABB4002C6E58 /* PopupDialogViewController.swift in Sources */,
 				268216B125AC15A800E6FF1F /* RoundedUIButton.swift in Sources */,
 				260B14F125B804610032F30A /* AppRefreshOperation.swift in Sources */,
 			);

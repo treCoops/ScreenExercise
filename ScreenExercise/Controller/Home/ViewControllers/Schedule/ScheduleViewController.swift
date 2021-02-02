@@ -87,6 +87,10 @@ class ScheduleViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
 }
 
 extension ScheduleViewController : UITableViewDelegate, UITableViewDataSource {
@@ -103,7 +107,15 @@ extension ScheduleViewController : UITableViewDelegate, UITableViewDataSource {
                UIView.animate(withDuration: 0.5, delay: 0.05 * Double(indexPath.row), animations: {
                    cell.alpha = 1
                })
+        
+        let clearView = UIView()
+        UIView().backgroundColor = UIColor.clear
+        UITableViewCell.appearance().selectedBackgroundView = clearView
                
-               return cell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         performSegue(withIdentifier: "ScheduleActivityRowAddSegue", sender: self)
     }
 }

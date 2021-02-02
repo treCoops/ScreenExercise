@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-ScreenExercise/Pods-ScreenExercise-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework
 ${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework
