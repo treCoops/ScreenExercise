@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DLRadioButton
 
 class AddChildProfileViewController: UIViewController {
 
@@ -23,4 +24,9 @@ class AddChildProfileViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
+    @IBAction func rdnRadioButtonSelected(_ sender: DLRadioButton) {
+        
+        
+        
+    }
 }

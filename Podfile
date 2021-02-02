@@ -8,6 +8,7 @@ target 'ScreenExercise' do
   # Pods for ScreenExercise
 
   pod 'iOSDropDown'
+  pod 'DLRadioButton', '~> 1.4'
 
   target 'ScreenExerciseTests' do
     inherit! :search_paths
