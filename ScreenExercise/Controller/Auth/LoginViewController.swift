@@ -14,6 +14,10 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnLoginFacebookPressed(_ sender: UIButton) {
+        AlertBar.success(title: "asd")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }

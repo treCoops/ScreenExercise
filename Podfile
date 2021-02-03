@@ -12,6 +12,7 @@ target 'ScreenExercise' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'Kingfisher', '~> 6.1'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 
 
   target 'ScreenExerciseTests' do

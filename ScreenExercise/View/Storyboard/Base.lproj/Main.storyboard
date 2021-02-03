@@ -60,6 +60,9 @@
                                         <state key="normal" backgroundImage="button_facebook">
                                             <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnLoginFacebookPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNE-Dp-Ke6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BV-pr-yjA" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="144" width="295" height="52"/>
@@ -113,7 +116,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCT-L1-pnR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="154" y="734"/>
+            <point key="canvasLocation" x="136" y="732"/>
         </scene>
         <!--Phone Number View Controller-->
         <scene sceneID="iUh-dp-1H8">
@@ -139,13 +142,13 @@
                                         <color key="textColor" red="1" green="0.9882352941176471" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   +94" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-5v-LSh" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+94777123456" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-5v-LSh" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="29.5" width="295" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="Kf8-lf-OPh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -160,7 +163,7 @@
                                     <color key="titleColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ECz-W4-yUM" kind="show" id="1cX-P2-oLg"/>
+                                    <action selector="btnContinuePressed:" destination="vgA-IC-ccK" eventType="touchUpInside" id="WIN-r2-A6P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -178,6 +181,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wZS-9J-AvV"/>
+                    <connections>
+                        <outlet property="txtPhoneNumber" destination="kbi-5v-LSh" id="191-1q-Iha"/>
+                        <segue destination="ECz-W4-yUM" kind="show" identifier="PhoneToOTPSegue" id="QoG-xN-aEL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MqO-vc-8jU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +193,7 @@
         <!--View Controller-->
         <scene sceneID="AN8-Rt-52y">
             <objects>
-                <viewController id="ECz-W4-yUM" sceneMemberID="viewController">
+                <viewController id="ECz-W4-yUM" customClass="OTPViewController" customModule="ScreenExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uPN-YL-Ijr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +220,7 @@
                                             <constraint firstAttribute="height" constant="52" id="8tw-7Y-vor"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -228,7 +235,7 @@
                                     <color key="titleColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ZRy-gc-PL8" kind="show" id="T8u-Or-y9w"/>
+                                    <action selector="btnGetStartedPressed:" destination="ECz-W4-yUM" eventType="touchUpInside" id="Qzw-oU-LRJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ve sent an One Time Password (OTP) to the number you provided." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8R-zn-Y1Q">
@@ -276,6 +283,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wkf-g9-HvE"/>
+                    <connections>
+                        <outlet property="txtOTP" destination="gon-lb-0wW" id="Qwl-KJ-8UA"/>
+                        <segue destination="ZRy-gc-PL8" kind="show" identifier="OTPToUserRegistration" id="RyZ-t6-w5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdq-Fe-1ca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

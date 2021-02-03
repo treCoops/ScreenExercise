@@ -45,12 +45,17 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - iOSDropDown (0.3.4)
   - Kingfisher (6.1.0)
+  - MarqueeLabel (4.0.5)
   - nanopb (2.30907.0):
     - nanopb/decode (= 2.30907.0)
     - nanopb/encode (= 2.30907.0)
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
+  - NotificationBannerSwift (3.0.6):
+    - MarqueeLabel (~> 4.0.5)
+    - SnapKit (~> 5.0.1)
   - PromisesObjC (1.2.12)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - DLRadioButton (~> 1.4)
@@ -58,6 +63,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - iOSDropDown (~> 0.3)
   - Kingfisher (~> 6.1)
+  - NotificationBannerSwift (~> 3.0.0)
 
 SPEC REPOS:
   trunk:
@@ -72,8 +78,11 @@ SPEC REPOS:
     - GTMSessionFetcher
     - iOSDropDown
     - Kingfisher
+    - MarqueeLabel
     - nanopb
+    - NotificationBannerSwift
     - PromisesObjC
+    - SnapKit
 
 SPEC CHECKSUMS:
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
@@ -87,9 +96,12 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
+  MarqueeLabel: 00cc0bcd087111dca575878b3531af980559707d
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
+  NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: ddfff68598234757685668bc05ac001ec72122ce
+PODFILE CHECKSUM: 6cba78be126456bbe032196b654d6510c5dcfe63
 
 COCOAPODS: 1.10.1

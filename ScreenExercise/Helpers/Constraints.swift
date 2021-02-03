@@ -43,3 +43,7 @@ struct DropdownArray {
     
     static var cmbCategory = ["Eyes", "Head & Neck", "Hands & Fingers", "Legs", "Breathing", "Mind", "Physical & Interactive"]
 }
+
+struct UserSessionKey {
+    static var KEY_VERIFICATION_ID = "KEY_VERIFICATION_ID"
+}
