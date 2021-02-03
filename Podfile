@@ -7,8 +7,12 @@ target 'ScreenExercise' do
 
   # Pods for ScreenExercise
 
-  pod 'iOSDropDown'
+  pod 'iOSDropDown', '~> 0.3'
   pod 'DLRadioButton', '~> 1.4'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Kingfisher', '~> 6.1'
+
 
   target 'ScreenExerciseTests' do
     inherit! :search_paths
