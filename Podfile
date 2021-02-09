@@ -13,6 +13,9 @@ target 'ScreenExercise' do
   pod 'Firebase/Storage'
   pod 'Kingfisher', '~> 6.1'
   pod 'NotificationBannerSwift', '~> 3.0.0'
+  pod 'GoogleSignIn'
+  pod 'RealmSwift'
+
 
 
   target 'ScreenExerciseTests' do

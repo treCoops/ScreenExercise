@@ -74,6 +74,9 @@
                                         <state key="normal" backgroundImage="button_google">
                                             <color key="titleColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnGoogleLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCg-QM-aeg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-Jk-j34" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="216" width="295" height="52"/>
@@ -134,16 +137,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-Ip-los">
-                                <rect key="frame" x="40" y="295" width="295" height="81.5"/>
+                                <rect key="frame" x="40" y="295" width="295" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-Tn-zcv">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.9882352941176471" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+94777123456" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-5v-LSh" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29.5" width="295" height="52"/>
+                                        <rect key="frame" x="0.0" y="29" width="295" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="Kf8-lf-OPh"/>
                                         </constraints>
@@ -153,7 +156,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Um3-2L-7AQ" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="40" y="396.5" width="295" height="52"/>
+                                <rect key="frame" x="40" y="396" width="295" height="52"/>
                                 <color key="backgroundColor" red="0.019607843137254902" green="0.6588235294117647" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="vPg-ZH-QdG"/>
@@ -206,16 +209,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mmk-JG-4Ki">
-                                <rect key="frame" x="40" y="295" width="295" height="81.5"/>
+                                <rect key="frame" x="40" y="295" width="295" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgd-h8-8AK">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gon-lb-0wW" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29.5" width="295" height="52"/>
+                                        <rect key="frame" x="0.0" y="29" width="295" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="8tw-7Y-vor"/>
                                         </constraints>
@@ -225,7 +228,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnn-8d-Nra" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="40" y="396.5" width="295" height="52"/>
+                                <rect key="frame" x="40" y="396" width="295" height="52"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="zYS-06-VH9"/>
@@ -239,22 +242,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ve sent an One Time Password (OTP) to the number you provided." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8R-zn-Y1Q">
-                                <rect key="frame" x="40" y="468.5" width="295" height="38.5"/>
+                                <rect key="frame" x="40" y="468" width="295" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-21" translatesAutoresizingMaskIntoConstraints="NO" id="qRu-NH-LHS">
-                                <rect key="frame" x="40" y="502" width="186" height="32"/>
+                                <rect key="frame" x="40" y="500.5" width="193" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t receive?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l89-co-YGw">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="31"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuA-nX-2an">
-                                        <rect key="frame" x="82.5" y="0.0" width="103.5" height="32"/>
+                                        <rect key="frame" x="86" y="0.0" width="107" height="31"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                         <state key="normal" title="Resend">
                                             <color key="titleColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -419,16 +422,16 @@
                                 <state key="normal" image="camera"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-gr-bmz">
-                                <rect key="frame" x="20" y="160" width="335" height="81.5"/>
+                                <rect key="frame" x="20" y="160" width="335" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6f-fa-ifC">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     Ex. Sam" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dd-Eh-TDb" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29.5" width="335" height="52"/>
+                                        <rect key="frame" x="0.0" y="29" width="335" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="fhQ-MU-vKh"/>
                                         </constraints>
@@ -438,16 +441,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ufp-XF-Re4">
-                                <rect key="frame" x="20" y="261.5" width="335" height="81.5"/>
+                                <rect key="frame" x="20" y="261" width="335" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-fR-HHJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     Ex. user@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gW-0a-RTO" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29.5" width="335" height="52"/>
+                                        <rect key="frame" x="0.0" y="29" width="335" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="7Y4-8X-7eY"/>
                                         </constraints>
@@ -457,16 +460,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2i0-ke-uV7">
-                                <rect key="frame" x="20" y="363" width="335" height="54.5"/>
+                                <rect key="frame" x="20" y="362" width="335" height="54"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-0s-F5O">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pi-Nq-Fj1">
-                                        <rect key="frame" x="0.0" y="24.5" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="24" width="335" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edg-47-aj7" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="0.5" width="60" height="29"/>
@@ -524,7 +527,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-eC-BM5" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="20" y="442.5" width="335" height="52"/>
+                                <rect key="frame" x="20" y="441" width="335" height="52"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.65098039220000004" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Blv-W2-CbY"/>
