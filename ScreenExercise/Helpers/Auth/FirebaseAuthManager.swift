@@ -36,6 +36,16 @@ class FirebaseAuthManager{
           self.delagate?.operationSuccess(msg: authResult?.user.uid ?? "no")
         }
     }
+    
+    func logout(){
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+            self.delagate?.logoutSuccess()
+        } catch let signOutError as NSError {
+            AlertBar.warning(title: "Error signing out: \(signOutError)")
+        }
+    }
 }
 
 protocol FirebaseActions {
@@ -45,6 +55,8 @@ protocol FirebaseActions {
     
     func operationSuccess(msg: String)
     func operationFailed(error: Error)
+    
+    func logoutSuccess()
 }
 
 extension FirebaseActions{
@@ -54,5 +66,7 @@ extension FirebaseActions{
     
     func operationSuccess(msg: String){}
     func operationFailed(error: Error){}
+    
+    func logoutSuccess(){}
 }
 

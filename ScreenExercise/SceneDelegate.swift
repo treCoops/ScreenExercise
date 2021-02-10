@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,7 +18,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
+        
+        
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let openURLContext = URLContexts.first {
+            ApplicationDelegate.shared.application(UIApplication.shared, open:
+            openURLContext.url, sourceApplication:
+            openURLContext.options.sourceApplication, annotation:
+            openURLContext.options.annotation)
+          }
+        
+        for urlContext in URLContexts {
+              let url = urlContext.url
+              Auth.auth().canHandle(url)
+          }
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

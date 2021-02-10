@@ -30,17 +30,17 @@ class PhoneNumberViewController: UIViewController {
         
         performSegue(withIdentifier: "PhoneToOTPSegue", sender: self)
         
-//        if(Validator.isEmpty(txtPhoneNumber.text ?? "")){
-//            AlertBar.danger(title: "Please enter your phone number.")
-//            return
-//        }
-//
-//        if(Validator.checkLenght(txtPhoneNumber.text ?? "", 12)){
-//            AlertBar.danger(title: "Please enter valid phone number.")
-//            return
-//        }
-//
-//        firebaseAuthManager.signUpViaPhoneNumber(phoneNumber: txtPhoneNumber.text ?? "")
+        if(Validator.isEmpty(txtPhoneNumber.text ?? "")){
+            AlertBar.danger(title: "Please enter your phone number.")
+            return
+        }
+
+        if(Validator.checkLenght(txtPhoneNumber.text ?? "", 12)){
+            AlertBar.danger(title: "Please enter valid phone number.")
+            return
+        }
+
+        firebaseAuthManager.signUpViaPhoneNumber(phoneNumber: txtPhoneNumber.text ?? "")
     }
     
     

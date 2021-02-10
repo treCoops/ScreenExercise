@@ -21,8 +21,15 @@ class OTPViewController: UIViewController {
 
         firebaseAuthManager.delagate = self
     }
+    @IBAction func btnResendOTPPressed(_ sender: UIButton) {
+        self.getOTP()
+    }
     
     @IBAction func btnGetStartedPressed(_ sender: UIButton) {
+        self.getOTP()
+    }
+    
+    func getOTP(){
         
         if(Validator.isEmpty(txtOTP.text ?? "")){
             AlertBar.danger(title: "Please enter the verification code.")
@@ -35,8 +42,6 @@ class OTPViewController: UIViewController {
         }
         
         firebaseAuthManager.signInViaPhoneNumber(verificationID: UserSession.getUserDefault(key: UserSessionKey.KEY_VERIFICATION_ID)!, verificationCode: txtOTP.text!)
-        
-//        OTPToUserRegistration
     }
     
 }
@@ -58,7 +63,7 @@ extension OTPViewController : UITextFieldDelegate{
 
 extension OTPViewController : FirebaseActions {
     func operationSuccess(msg: String) {
-        AlertBar.success(title: msg)
+        performSegue(withIdentifier: "segueToSignInForm", sender: self)
     }
     
     func operationFailed(error: Error) {

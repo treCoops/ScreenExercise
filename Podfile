@@ -15,6 +15,10 @@ target 'ScreenExercise' do
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'GoogleSignIn'
   pod 'RealmSwift'
+  pod ‘FacebookCore’
+  pod ‘FacebookLogin’
+  pod ‘FBSDKCoreKit’
+  pod ‘FBSDKLoginKit’
 
 
 

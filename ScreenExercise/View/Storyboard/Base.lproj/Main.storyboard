@@ -106,6 +106,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yeJ-BP-JhB"/>
+                    <connections>
+                        <segue destination="ZRy-gc-PL8" kind="show" identifier="segueToSignInForm" id="irt-YQ-JWk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,16 +140,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-Ip-los">
-                                <rect key="frame" x="40" y="295" width="295" height="81"/>
+                                <rect key="frame" x="40" y="295" width="295" height="81.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-Tn-zcv">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.9882352941176471" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+94777123456" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-5v-LSh" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29" width="295" height="52"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="295" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="Kf8-lf-OPh"/>
                                         </constraints>
@@ -156,7 +159,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Um3-2L-7AQ" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="40" y="396" width="295" height="52"/>
+                                <rect key="frame" x="40" y="396.5" width="295" height="52"/>
                                 <color key="backgroundColor" red="0.019607843137254902" green="0.6588235294117647" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="vPg-ZH-QdG"/>
@@ -209,16 +212,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mmk-JG-4Ki">
-                                <rect key="frame" x="40" y="295" width="295" height="81"/>
+                                <rect key="frame" x="40" y="295" width="295" height="81.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgd-h8-8AK">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gon-lb-0wW" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29" width="295" height="52"/>
+                                        <rect key="frame" x="0.0" y="29.5" width="295" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="8tw-7Y-vor"/>
                                         </constraints>
@@ -228,7 +231,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnn-8d-Nra" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="40" y="396" width="295" height="52"/>
+                                <rect key="frame" x="40" y="396.5" width="295" height="52"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="zYS-06-VH9"/>
@@ -242,26 +245,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ve sent an One Time Password (OTP) to the number you provided." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8R-zn-Y1Q">
-                                <rect key="frame" x="40" y="468" width="295" height="37.5"/>
+                                <rect key="frame" x="40" y="468.5" width="295" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-21" translatesAutoresizingMaskIntoConstraints="NO" id="qRu-NH-LHS">
-                                <rect key="frame" x="40" y="500.5" width="193" height="31"/>
+                                <rect key="frame" x="40" y="502" width="186" height="32"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t receive?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l89-co-YGw">
-                                        <rect key="frame" x="0.0" y="0.0" width="107" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="32"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuA-nX-2an">
-                                        <rect key="frame" x="86" y="0.0" width="107" height="31"/>
+                                        <rect key="frame" x="82.5" y="0.0" width="103.5" height="32"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                         <state key="normal" title="Resend">
                                             <color key="titleColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnResendOTPPressed:" destination="ECz-W4-yUM" eventType="touchUpInside" id="XoE-4J-1JM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -288,7 +294,7 @@
                     <navigationItem key="navigationItem" id="wkf-g9-HvE"/>
                     <connections>
                         <outlet property="txtOTP" destination="gon-lb-0wW" id="Qwl-KJ-8UA"/>
-                        <segue destination="ZRy-gc-PL8" kind="show" identifier="OTPToUserRegistration" id="RyZ-t6-w5P"/>
+                        <segue destination="ZRy-gc-PL8" kind="show" identifier="segueToSignInForm" id="RyZ-t6-w5P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdq-Fe-1ca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -421,17 +427,36 @@
                                 </constraints>
                                 <state key="normal" image="camera"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-gr-bmz">
-                                <rect key="frame" x="20" y="160" width="335" height="81"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-tl-EZx">
+                                <rect key="frame" x="20" y="261.5" width="335" height="81.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6f-fa-ifC">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08E-Gj-5jQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     Ex. Sam" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dd-Eh-TDb" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29" width="335" height="52"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+94777123456" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEz-7f-zzu" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="29.5" width="335" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="IHp-a1-5EQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-gr-bmz">
+                                <rect key="frame" x="20" y="160" width="335" height="81.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6f-fa-ifC">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
+                                        <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex. Sam" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dd-Eh-TDb" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="29.5" width="335" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="fhQ-MU-vKh"/>
                                         </constraints>
@@ -440,17 +465,31 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-eC-BM5" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
+                                <rect key="frame" x="20" y="544" width="335" height="52"/>
+                                <color key="backgroundColor" red="0.019607843140000001" green="0.65098039220000004" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Blv-W2-CbY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="16"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fhi-Rb-pIm" kind="show" id="LPw-bA-1pS"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ufp-XF-Re4">
-                                <rect key="frame" x="20" y="261" width="335" height="81"/>
+                                <rect key="frame" x="20" y="363" width="335" height="81.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9D-fR-HHJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="     Ex. user@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gW-0a-RTO" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29" width="335" height="52"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex. user@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gW-0a-RTO" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="29.5" width="335" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="7Y4-8X-7eY"/>
                                         </constraints>
@@ -460,16 +499,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2i0-ke-uV7">
-                                <rect key="frame" x="20" y="362" width="335" height="54"/>
+                                <rect key="frame" x="20" y="464.5" width="335" height="54.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-0s-F5O">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pi-Nq-Fj1">
-                                        <rect key="frame" x="0.0" y="24" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="335" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edg-47-aj7" customClass="DLRadioButton">
                                                 <rect key="frame" x="0.0" y="0.5" width="60" height="29"/>
@@ -526,49 +565,51 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-eC-BM5" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="20" y="441" width="335" height="52"/>
-                                <color key="backgroundColor" red="0.019607843140000001" green="0.65098039220000004" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="Blv-W2-CbY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="16"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fhi-Rb-pIm" kind="show" id="LPw-bA-1pS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AsQ-hJ-7zt"/>
                         <color key="backgroundColor" red="0.13725490200000001" green="0.3411764706" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="2i0-ke-uV7" firstAttribute="top" secondItem="ufp-XF-Re4" secondAttribute="bottom" constant="20" id="4A8-Gz-JzT"/>
+                            <constraint firstItem="ufp-XF-Re4" firstAttribute="top" secondItem="xDK-tl-EZx" secondAttribute="bottom" constant="20" id="9Kr-Go-lOe"/>
+                            <constraint firstItem="ufp-XF-Re4" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="AcC-iq-lgL"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="2i0-ke-uV7" secondAttribute="trailing" constant="20" id="DLu-Rk-Gm8"/>
-                            <constraint firstItem="ufp-XF-Re4" firstAttribute="top" secondItem="uhT-gr-bmz" secondAttribute="bottom" constant="20" id="FZC-02-HPw"/>
+                            <constraint firstItem="xDK-tl-EZx" firstAttribute="top" secondItem="uhT-gr-bmz" secondAttribute="bottom" constant="20" id="Ek9-Mz-mgg"/>
                             <constraint firstItem="I0E-O8-Eew" firstAttribute="centerX" secondItem="VKN-9l-TgK" secondAttribute="centerX" id="Jfg-Iz-4pu"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="ufp-XF-Re4" secondAttribute="trailing" constant="20" id="MuY-34-WhG"/>
                             <constraint firstItem="I0E-O8-Eew" firstAttribute="top" secondItem="AsQ-hJ-7zt" secondAttribute="top" constant="75" id="RJg-Bn-30y"/>
-                            <constraint firstItem="Wen-eC-BM5" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="VFP-pt-q54"/>
+                            <constraint firstItem="Wen-eC-BM5" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="Yvk-H1-QyI"/>
                             <constraint firstItem="uhT-gr-bmz" firstAttribute="top" secondItem="12L-4F-xfu" secondAttribute="bottom" constant="30" id="b8Z-3F-VkA"/>
                             <constraint firstItem="2i0-ke-uV7" firstAttribute="top" secondItem="ufp-XF-Re4" secondAttribute="bottom" constant="20" id="ehh-Zs-UFU"/>
                             <constraint firstItem="uhT-gr-bmz" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="jdu-xC-HOT"/>
+                            <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="2i0-ke-uV7" secondAttribute="trailing" constant="20" id="kbL-lq-YRq"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="uhT-gr-bmz" secondAttribute="trailing" constant="20" id="ngZ-xT-xfc"/>
+                            <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="xDK-tl-EZx" secondAttribute="trailing" constant="20" id="p3z-8y-R14"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="Wen-eC-BM5" secondAttribute="trailing" constant="20" id="tQ1-Hb-8RT"/>
                             <constraint firstItem="12L-4F-xfu" firstAttribute="top" secondItem="AsQ-hJ-7zt" secondAttribute="top" constant="40" id="vpe-SW-01z"/>
+                            <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="ufp-XF-Re4" secondAttribute="trailing" constant="20" id="wJP-Ma-gfZ"/>
                             <constraint firstItem="Wen-eC-BM5" firstAttribute="top" secondItem="2i0-ke-uV7" secondAttribute="bottom" constant="25" id="wix-M9-mjG"/>
                             <constraint firstItem="2i0-ke-uV7" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="wuL-Wh-gtr"/>
                             <constraint firstItem="ufp-XF-Re4" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="xqc-MB-n1f"/>
+                            <constraint firstItem="2i0-ke-uV7" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="xwD-jy-cTf"/>
+                            <constraint firstItem="xDK-tl-EZx" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="yUI-Rb-u8X"/>
                             <constraint firstItem="12L-4F-xfu" firstAttribute="centerX" secondItem="VKN-9l-TgK" secondAttribute="centerX" id="ys2-S5-S2S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0PY-k2-3Tk"/>
+                    <connections>
+                        <outlet property="imgProfile" destination="12L-4F-xfu" id="N3C-ab-JRx"/>
+                        <outlet property="txtEmailAddress" destination="5gW-0a-RTO" id="6rL-Md-6PK"/>
+                        <outlet property="txtName" destination="5dd-Eh-TDb" id="hjM-3O-8aZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrg-ts-ZfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2918" y="136"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="irt-YQ-JWk"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="auth_main_logo" width="148" height="95"/>
         <image name="button_facebook" width="1002" height="156"/>
