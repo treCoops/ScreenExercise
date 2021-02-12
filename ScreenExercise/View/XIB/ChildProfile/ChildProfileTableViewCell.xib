@@ -160,8 +160,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imgProfile" destination="dGh-WC-5hO" id="TP4-ZU-5bi"/>
                 <outlet property="lblStatus" destination="enh-Sr-yBQ" id="0WT-Os-nyy"/>
                 <outlet property="parentView" destination="p1h-QD-x7g" id="oEo-dJ-tkA"/>
+                <outlet property="txtCompletedCount" destination="A9x-fJ-BGt" id="Qfc-BS-AbG"/>
+                <outlet property="txtIncompletedCount" destination="IvA-HW-0Im" id="Vgr-rb-Jad"/>
+                <outlet property="txtName" destination="egQ-Up-lBW" id="PHf-k8-WKY"/>
+                <outlet property="txtPendingCount" destination="Vum-Yh-ZU9" id="mIT-4x-gq6"/>
             </connections>
             <point key="canvasLocation" x="139.13043478260872" y="176.11607142857142"/>
         </tableViewCell>

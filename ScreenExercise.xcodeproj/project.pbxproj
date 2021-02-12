@@ -33,6 +33,7 @@
 		26465D1425ADAB8C001EAC1B /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26465D1225ADAB8C001EAC1B /* ScheduleTableViewCell.xib */; };
 		26465D2025ADAC58001EAC1B /* XIBSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26465D1F25ADAC58001EAC1B /* XIBSchedule.swift */; };
 		26465D2625ADACCB001EAC1B /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26465D2525ADACCB001EAC1B /* Constraints.swift */; };
+		2657B86125D58BAE002832F7 /* ChildProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2657B86025D58BAE002832F7 /* ChildProfile.swift */; };
 		267F391C25BE9E0D00D2B396 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F391B25BE9E0D00D2B396 /* EventHandler.swift */; };
 		268216B125AC15A800E6FF1F /* RoundedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268216B025AC15A800E6FF1F /* RoundedUIButton.swift */; };
 		268216C425AC16E300E6FF1F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 268216B925AC16E200E6FF1F /* Lato-Thin.ttf */; };
@@ -129,6 +130,7 @@
 		26465D1225ADAB8C001EAC1B /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		26465D1F25ADAC58001EAC1B /* XIBSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBSchedule.swift; sourceTree = "<group>"; };
 		26465D2525ADACCB001EAC1B /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		2657B86025D58BAE002832F7 /* ChildProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfile.swift; sourceTree = "<group>"; };
 		267F391B25BE9E0D00D2B396 /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 		268216B025AC15A800E6FF1F /* RoundedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIButton.swift; sourceTree = "<group>"; };
 		268216B925AC16E200E6FF1F /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				2633C21625C122CD002C6E58 /* XIBChildProfile.swift */,
+				2657B86025D58BAE002832F7 /* ChildProfile.swift */,
 			);
 			path = ChildProfile;
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				267F391C25BE9E0D00D2B396 /* EventHandler.swift in Sources */,
 				26842C0125B1557000241F03 /* XIBCategoryTwo.swift in Sources */,
 				26DAB28C25CA909300EA88A0 /* Validator.swift in Sources */,
+				2657B86125D58BAE002832F7 /* ChildProfile.swift in Sources */,
 				26842BF825B1550600241F03 /* CategoryTwoCollectionViewCell.swift in Sources */,
 				2633C29D25C9BF5B002C6E58 /* SettingViewController.swift in Sources */,
 				268216D725AC1CF500E6FF1F /* PhoneNumberViewController.swift in Sources */,

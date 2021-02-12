@@ -280,17 +280,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="zQg-jW-ok9">
-                                        <rect key="frame" x="20" y="55" width="228" height="35"/>
+                                        <rect key="frame" x="20" y="55" width="239" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-5G-XMR">
-                                                <rect key="frame" x="0.0" y="0.0" width="14" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="14" height="36"/>
                                                 <state key="normal" image="back"/>
                                                 <connections>
                                                     <action selector="btnBackPressed:" destination="HYy-uu-sFP" eventType="touchUpInside" id="pfh-gT-tq1"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rol-Sh-X08">
-                                                <rect key="frame" x="38" y="0.0" width="190" height="35"/>
+                                                <rect key="frame" x="38" y="0.0" width="201" height="36"/>
                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="30"/>
                                                 <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -325,7 +325,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDz-o3-VHZ" customClass="CustomTextFieldPlaceholder" customModule="ScreenExercise" customModuleProvider="target">
-                                                                <rect key="frame" x="41" y="11" width="284" height="18"/>
+                                                                <rect key="frame" x="41" y="10.666666666666659" width="284" height="18.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -346,13 +346,13 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoV-3X-WTs">
-                                                        <rect key="frame" x="15" y="70" width="184.66666666666666" height="25.666666666666671"/>
+                                                        <rect key="frame" x="15" y="70" width="189.66666666666666" height="26.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="22"/>
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eah-ne-CsH">
-                                                        <rect key="frame" x="15" y="115.66666666666663" width="345" height="300"/>
+                                                        <rect key="frame" x="15" y="116.66666666666663" width="345" height="300"/>
                                                         <color key="backgroundColor" red="0.97254901960784312" green="0.98431372549019602" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="300" id="OzB-3H-BqO"/>
@@ -379,13 +379,13 @@
                                                         </connections>
                                                     </collectionView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t48-sZ-Adh">
-                                                        <rect key="frame" x="15" y="430.66666666666663" width="172" height="25.666666666666686"/>
+                                                        <rect key="frame" x="15" y="431.66666666666663" width="175" height="26.666666666666686"/>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="22"/>
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V54-NW-j6c" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                                        <rect key="frame" x="281" y="430.66666666666663" width="79" height="30"/>
+                                                        <rect key="frame" x="281" y="431.66666666666663" width="79" height="30"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="3vs-hh-uhu"/>
@@ -397,13 +397,13 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press “Create” button to create custom activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRe-z1-wiN">
-                                                        <rect key="frame" x="15" y="466.33333333333337" width="345" height="16.333333333333314"/>
+                                                        <rect key="frame" x="15" y="468.33333333333337" width="345" height="17"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <color key="textColor" red="0.80000000000000004" green="0.81568627450980391" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hE5-gt-I4E">
-                                                        <rect key="frame" x="15" y="497.66666666666657" width="345" height="244.33333333333331"/>
+                                                        <rect key="frame" x="15" y="500.33333333333343" width="345" height="241.66666666666669"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <connections>
                                                             <outlet property="dataSource" destination="HYy-uu-sFP" id="PHP-hU-FJS"/>
@@ -725,7 +725,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ics-5Q-a8e">
-                                <rect key="frame" x="20" y="122.99999999999999" width="173.33333333333334" height="37.333333333333329"/>
+                                <rect key="frame" x="20" y="123.00000000000001" width="178" height="38.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="32"/>
                                 <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -741,16 +741,16 @@
                                 <rect key="frame" x="0.0" y="186" width="375" height="563"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YrK-OA-sco">
-                                        <rect key="frame" x="20" y="20" width="271.66666666666669" height="50"/>
+                                        <rect key="frame" x="20" y="19.999999999999996" width="259.33333333333331" height="51.666666666666657"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Total Profiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fF-Hq-jjs">
-                                                <rect key="frame" x="0.0" y="0.0" width="144" height="25.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="149.66666666666666" height="26.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="22"/>
                                                 <color key="textColor" red="0.0039215686274509803" green="0.086274509803921567" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press “Add” button to add new child profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vko-Wh-G7r">
-                                                <rect key="frame" x="0.0" y="33.666666666666657" width="271.66666666666669" height="16.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="34.666666666666657" width="259.33333333333331" height="17"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                 <color key="textColor" red="0.80000000000000004" green="0.81568627450980391" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -771,7 +771,7 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="71Q-54-e7s">
-                                        <rect key="frame" x="10" y="85" width="355" height="428"/>
+                                        <rect key="frame" x="10" y="86.666666666666714" width="355" height="426.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="9vL-AV-caL" id="H7z-ma-F7K"/>
@@ -861,6 +861,9 @@
                                                         <state key="normal" title="Create">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="btnCreadeChildProfilePressed:" destination="8kP-cm-qLG" eventType="touchUpInside" id="RPG-xw-tWN"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -897,7 +900,7 @@
                                                                         <color key="value" red="0.88627450980392153" green="0.92549019607843142" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
-                                                                        <color key="value" red="0.30980392159999998" green="0.47450980390000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="value" red="0.13725490200000001" green="0.3411764706" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
                                                                         <real key="value" value="1"/>
@@ -905,6 +908,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="rdnRadioButtonSelected:" destination="8kP-cm-qLG" eventType="touchUpInside" id="Lc1-4g-gDY"/>
+                                                                    <outletCollection property="otherButtons" destination="gl1-f4-5l3" id="Uea-DQ-BlX"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl1-f4-5l3" customClass="DLRadioButton">
@@ -928,7 +932,8 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="rdnRadioButtonSelected:" destination="8kP-cm-qLG" eventType="touchUpInside" id="Ood-Cp-BSB"/>
+                                                                    <action selector="rdnRadioButtonSelected:" destination="8kP-cm-qLG" eventType="touchUpInside" id="lEe-y9-9af"/>
+                                                                    <outletCollection property="otherButtons" destination="Zfn-Ny-Chg" id="xxg-zM-8mF"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -959,7 +964,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="WXn-iR-MvY"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -972,14 +977,14 @@
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    The name you call your kid at home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="asv-DD-Ycv" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="The name you call your kid at home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="asv-DD-Ycv" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="27" width="335" height="40"/>
                                                         <color key="backgroundColor" red="0.8862745098" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="WgF-s1-pH3"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -992,14 +997,14 @@
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Ex. John Smith " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4g-6D-G4e" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ex. John Smith " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4g-6D-G4e" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="27" width="335" height="40"/>
                                                         <color key="backgroundColor" red="0.8862745098" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Cth-XT-Ipd"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -1017,6 +1022,9 @@
                                                     <constraint firstAttribute="height" constant="18" id="Gea-Vg-TKt"/>
                                                 </constraints>
                                                 <state key="normal" image="camera"/>
+                                                <connections>
+                                                    <action selector="btnImageSelectPressed:" destination="8kP-cm-qLG" eventType="touchUpInside" id="8L6-Mm-ZAA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -1065,6 +1073,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6eu-KK-9Qe" customClass="NavigationBar" customModule="ScreenExercise" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="imgChildProfilePicture" destination="gcN-cK-EHN" id="ln7-Di-UpP"/>
+                        <outlet property="rdbMale" destination="Zfn-Ny-Chg" id="0Rw-Ft-5sM"/>
+                        <outlet property="txtChildAge" destination="11B-10-u8L" id="hOt-Xn-DO7"/>
+                        <outlet property="txtChildName" destination="d4g-6D-G4e" id="XpH-qp-Nbo"/>
+                        <outlet property="txtChildNickName" destination="asv-DD-Ycv" id="Wo2-uE-3vC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIm-iv-FNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1211,7 +1226,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="mgI-cr-t4s" kind="show" id="yS4-Nq-Qlv"/>
+                                                    <action selector="btnEditPressed:" destination="nZJ-oP-SKZ" eventType="touchUpInside" id="6ID-5s-6Ne"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cok-3Y-ssN" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
@@ -1224,6 +1239,9 @@
                                                 <state key="normal" title="Active this Profile">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnProfileActivedPressed:" destination="nZJ-oP-SKZ" eventType="touchUpInside" id="cYh-BY-hie"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1260,6 +1278,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l6x-ai-gEj"/>
+                    <connections>
+                        <outlet property="imgProfile" destination="FKd-q9-vTu" id="tRZ-96-iZB"/>
+                        <outlet property="txtAddedDate" destination="kg1-La-87Y" id="0Ng-Ze-Fli"/>
+                        <outlet property="txtAge" destination="bqB-4Z-jOW" id="UHE-Tv-4R7"/>
+                        <outlet property="txtGender" destination="px5-tQ-mwc" id="81I-kk-fok"/>
+                        <outlet property="txtName" destination="qxc-0y-w8G" id="O53-75-Tbk"/>
+                        <outlet property="txtTotalCompleted" destination="GmZ-Je-AwC" id="Aje-lf-Lk6"/>
+                        <segue destination="mgI-cr-t4s" kind="show" identifier="SegueEditChildProfile" id="3ry-py-K2K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSh-y1-n5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1425,7 +1452,7 @@
         <!--HomeUI Tab Bar Controller-->
         <scene sceneID="5zM-AQ-NLm">
             <objects>
-                <tabBarController id="hFG-EN-QRh" customClass="HomeUITabBarController" customModule="ScreenExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" id="hFG-EN-QRh" customClass="HomeUITabBarController" customModule="ScreenExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="put-UO-rsl"/>
                     <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="iRq-1H-Ekb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1458,17 +1485,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="wVB-AN-caZ">
-                                        <rect key="frame" x="20" y="55" width="228" height="35"/>
+                                        <rect key="frame" x="20" y="55" width="239" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-SG-My3">
-                                                <rect key="frame" x="0.0" y="0.0" width="14" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="14" height="36"/>
                                                 <state key="normal" image="back"/>
                                                 <connections>
                                                     <action selector="btnBackPressed:" destination="5WN-kZ-LgN" eventType="touchUpInside" id="AQ0-m6-RS3"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5f-Xc-FLS">
-                                                <rect key="frame" x="38" y="0.0" width="190" height="35"/>
+                                                <rect key="frame" x="38" y="0.0" width="201" height="36"/>
                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="30"/>
                                                 <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1503,7 +1530,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfO-tG-IGT" customClass="CustomTextFieldPlaceholder" customModule="ScreenExercise" customModuleProvider="target">
-                                                                <rect key="frame" x="41" y="11" width="284" height="18"/>
+                                                                <rect key="frame" x="41" y="10.666666666666659" width="284" height="18.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1524,13 +1551,13 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RJ-M3-UqA">
-                                                        <rect key="frame" x="15" y="70" width="88.666666666666671" height="25.666666666666671"/>
+                                                        <rect key="frame" x="15" y="70" width="94.333333333333329" height="26.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="22"/>
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ouW-pH-0iW">
-                                                        <rect key="frame" x="15" y="115.66666666666663" width="345" height="300"/>
+                                                        <rect key="frame" x="15" y="116.66666666666663" width="345" height="300"/>
                                                         <color key="backgroundColor" red="0.97254901959999995" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="300" id="Ql0-a8-H5G"/>
@@ -1557,13 +1584,13 @@
                                                         </connections>
                                                     </collectionView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rle-oS-MdQ">
-                                                        <rect key="frame" x="15" y="430.66666666666663" width="172" height="25.666666666666686"/>
+                                                        <rect key="frame" x="15" y="431.66666666666663" width="175" height="26.666666666666686"/>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="22"/>
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-00-jE6" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                                        <rect key="frame" x="281" y="430.66666666666663" width="79" height="30"/>
+                                                        <rect key="frame" x="281" y="431.66666666666663" width="79" height="30"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="79" id="AIa-Nj-BBX"/>
@@ -1575,13 +1602,13 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press “Create” button to create custom activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrl-i2-AC9">
-                                                        <rect key="frame" x="15" y="466.33333333333337" width="345" height="16.333333333333314"/>
+                                                        <rect key="frame" x="15" y="468.33333333333337" width="345" height="17"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <color key="textColor" red="0.80000000000000004" green="0.81568627449999997" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Zp-gO-giY">
-                                                        <rect key="frame" x="15" y="497.66666666666657" width="345" height="244.33333333333331"/>
+                                                        <rect key="frame" x="15" y="500.33333333333343" width="345" height="241.66666666666669"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <connections>
                                                             <outlet property="dataSource" destination="5WN-kZ-LgN" id="yUg-eD-5qS"/>
@@ -1589,7 +1616,7 @@
                                                         </connections>
                                                     </tableView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wXE-DI-SFu" customClass="DropDown" customModule="iOSDropDown">
-                                                        <rect key="frame" x="280" y="78" width="80" height="18"/>
+                                                        <rect key="frame" x="280" y="78" width="80" height="18.666666666666671"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="2fs-KE-p6K"/>
                                                         </constraints>
@@ -1685,17 +1712,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-On-W50">
-                                        <rect key="frame" x="20" y="55" width="136" height="35"/>
+                                        <rect key="frame" x="20" y="55" width="149" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZa-cp-WSP">
-                                                <rect key="frame" x="0.0" y="0.0" width="14" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="14" height="36"/>
                                                 <state key="normal" image="back"/>
                                                 <connections>
                                                     <action selector="btnBackPressed:" destination="tCo-LZ-g7w" eventType="touchUpInside" id="E4f-kr-0O0"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFI-kI-vML">
-                                                <rect key="frame" x="38" y="0.0" width="98" height="35"/>
+                                                <rect key="frame" x="38" y="0.0" width="111" height="36"/>
                                                 <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="30"/>
                                                 <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1720,26 +1747,26 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="752"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left to Right - Up &amp; Down" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcZ-90-af0">
-                                                        <rect key="frame" x="15" y="20" width="254" height="25.666666666666671"/>
+                                                        <rect key="frame" x="15.000000000000014" y="20" width="249.33333333333337" height="26.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="22"/>
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm1-Qt-Fnp">
-                                                        <rect key="frame" x="15" y="60.66666666666665" width="345" height="65.333333333333314"/>
+                                                        <rect key="frame" x="15" y="61.66666666666665" width="345" height="67.333333333333314"/>
                                                         <string key="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</string>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                         <color key="textColor" red="0.40392156862745099" green="0.44705882352941173" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="char" translatesAutoresizingMaskIntoConstraints="NO" id="JSe-f8-XAz" customClass="CornerRoundImageView" customModule="ScreenExercise" customModuleProvider="target">
-                                                        <rect key="frame" x="15" y="141" width="345" height="437"/>
+                                                        <rect key="frame" x="15" y="144" width="345" height="437"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="437" id="3vE-up-ao2"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52F-Ra-iO8" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                                        <rect key="frame" x="15" y="598" width="345" height="52"/>
+                                                        <rect key="frame" x="15" y="601" width="345" height="52"/>
                                                         <color key="backgroundColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="cVw-qV-MjW"/>
@@ -2200,6 +2227,7 @@
                             <constraint firstItem="lIt-Y7-GzR" firstAttribute="bottom" secondItem="6sW-v3-Ea9" secondAttribute="bottom" id="ciy-hY-sw9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PWG-ot-02v"/>
                     <connections>
                         <outlet property="txtDescription" destination="rp3-7A-6Ro" id="hLP-Md-gnU"/>
                         <outlet property="txtTitle" destination="mfl-7U-9Lq" id="ILB-rE-Oa5"/>
@@ -2257,6 +2285,9 @@
                                                                 <state key="normal" title="Save">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="btnSavPressed:" destination="mgI-cr-t4s" eventType="touchUpInside" id="Tll-O1-JVI"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOe-Il-Sb2" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
                                                                 <rect key="frame" x="178.66666666666663" y="0.0" width="156.33333333333337" height="52"/>
@@ -2316,7 +2347,8 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="rdnRadioButtonSelected:" destination="mgI-cr-t4s" eventType="touchUpInside" id="Q9V-y8-shA"/>
+                                                                    <action selector="rdbGender:" destination="mgI-cr-t4s" eventType="touchUpInside" id="s1R-yt-Uim"/>
+                                                                    <outletCollection property="otherButtons" destination="v1e-Mp-XeG" id="vXv-QI-RKo"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-Mp-XeG" customClass="DLRadioButton">
@@ -2340,7 +2372,8 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="rdnRadioButtonSelected:" destination="mgI-cr-t4s" eventType="touchUpInside" id="M1t-Lj-4Hw"/>
+                                                                    <action selector="rdbGender:" destination="mgI-cr-t4s" eventType="touchUpInside" id="iBe-Xf-dSR"/>
+                                                                    <outletCollection property="otherButtons" destination="QNm-tA-M0l" id="8FN-xQ-M9v"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -2364,7 +2397,7 @@
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="     12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIU-cm-iG3" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIU-cm-iG3" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="27" width="335" height="40"/>
                                                         <color key="backgroundColor" red="0.8862745098" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -2385,7 +2418,7 @@
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="     Tikiri" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4g8-6z-pXF" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="The name you call your kid at home" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4g8-6z-pXF" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="27" width="335" height="40"/>
                                                         <color key="backgroundColor" red="0.8862745098" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -2406,7 +2439,7 @@
                                                         <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="     Erin Calzoni" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YdD-Xc-MOm" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ex. John Smith" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YdD-Xc-MOm" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="27" width="335" height="40"/>
                                                         <color key="backgroundColor" red="0.8862745098" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -2432,6 +2465,9 @@
                                                     <constraint firstAttribute="height" constant="18" id="MrG-gj-eR9"/>
                                                 </constraints>
                                                 <state key="normal" image="camera"/>
+                                                <connections>
+                                                    <action selector="btnProfilePictureButtonPressed:" destination="mgI-cr-t4s" eventType="touchUpInside" id="L7d-jU-WAN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -2480,6 +2516,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8XL-xf-XHE" customClass="NavigationBar" customModule="ScreenExercise" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="imgChildProfilePic" destination="pCw-lB-m9E" id="B1U-eF-W0y"/>
+                        <outlet property="rdnFemale" destination="v1e-Mp-XeG" id="V4S-tC-XWH"/>
+                        <outlet property="rdnMale" destination="QNm-tA-M0l" id="Sjt-Sw-3r6"/>
+                        <outlet property="txtAge" destination="iIU-cm-iG3" id="6ko-MH-uAa"/>
+                        <outlet property="txtChildName" destination="YdD-Xc-MOm" id="d0Z-Qd-X1H"/>
+                        <outlet property="txtNickName" destination="4g8-6z-pXF" id="p9B-Fz-6Bq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERG-Us-BCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

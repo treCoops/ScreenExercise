@@ -6,17 +6,33 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PopupDialogViewController: UIViewController {
     @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var txtDescription: UILabel!
     static var from : String = ""
-    @IBOutlet weak var viewParent: CustomRoundedView!
+    static var id : String = ""
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
         if(sender.tag == 1){
-            print("Yes")
+            if(PopupDialogViewController.from == "EDITCHILD"){
+                do {
+                    let realm = try Realm()
+
+                    if let obj = realm.objects(ChildProfile.self).filter("childID = %@", PopupDialogViewController.id).first {
+
+                        try! realm.write {
+                            realm.delete(obj)
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    }
+
+                } catch let error {
+                    print("error - \(error.localizedDescription)")
+                }
+            }
         }else if(sender.tag == 2){
             self.dismiss(animated: true, completion: nil)
         }
@@ -42,8 +58,11 @@ class PopupDialogViewController: UIViewController {
     
     static func showPopup(parentVC: UIViewController, from: String){
         
-        self.from = from
+        let words = from.components(separatedBy: [">"]).filter({!$0.isEmpty})
         
+        self.from = words[0]
+        self.id = words[1]
+
         if let popupViewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "PopupDialogViewController") as? PopupDialogViewController {
             popupViewController.modalPresentationStyle = .custom
             popupViewController.modalTransitionStyle = .crossDissolve

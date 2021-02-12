@@ -18,7 +18,7 @@ class Validator {
     }
     
     static func isValidName(_ name: String) -> Bool{
-        let nameRegEx = "[A-Za-z ]{2,50}"
+        let nameRegEx = "(?<! )[-a-zA-Z' ]{2,26}"
         let namePred = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
 
         return namePred.evaluate(with: name)
@@ -44,5 +44,12 @@ class Validator {
         }else{
             return false
         }
+    }
+    
+    static func isNumber(_ text: String) -> Bool{
+        let numberRegEx = "^[0-9]{1,2}$"
+        let numberPred = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+
+        return numberPred.evaluate(with: text)
     }
 }
