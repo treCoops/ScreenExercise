@@ -20,8 +20,7 @@ class ViewChildProfileViewController: UIViewController {
     @IBOutlet weak var txtGender: UILabel!
     @IBOutlet weak var txtTotalCompleted: UILabel!
     @IBOutlet weak var txtAddedDate: UILabel!
-    
-    
+    @IBOutlet weak var btnActiveProfile: UIButton!
     
     
     override func viewDidLoad() {
@@ -36,11 +35,12 @@ class ViewChildProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.fillForm()
+        self.checkForActiveOrNot()
     }
     
     func stringFromDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMM yyyy" //yyyy
+        formatter.dateFormat = "dd MMM yyyy"
         return formatter.string(from: date)
     }
     
@@ -77,9 +77,13 @@ class ViewChildProfileViewController: UIViewController {
             }
         }
         
+        self.checkForActiveOrNot()
+        
+        UserSession.setString(data: childID, key: UserSessionKey.ACTIVED_CHILD_ID)
+        print(childID)
+        
         AlertBar.success(title: "Child profile has been activated!")
     }
-    
 }
 
 extension ViewChildProfileViewController {
@@ -88,4 +92,21 @@ extension ViewChildProfileViewController {
             (segue.destination as! EditChildProfileViewController).childProfile = child
         }
     }
+}
+
+extension ViewChildProfileViewController {
+    
+    func checkForActiveOrNot(){
+        let realm = try! Realm()
+        let result = realm.objects(ChildProfile.self).filter("childID = %@", childID)
+        if let child = result.first {
+            if(child.isActive){
+                btnActiveProfile.setTitle("Activated", for: .normal)
+                btnActiveProfile.backgroundColor = #colorLiteral(red: 0.6235294118, green: 0.6784313725, blue: 0.7215686275, alpha: 1)
+                btnActiveProfile.isEnabled = false
+            }
+        }
+ 
+    }
+   
 }

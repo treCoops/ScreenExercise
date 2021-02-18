@@ -138,6 +138,7 @@ class EditChildProfileViewController: UIViewController, UINavigationControllerDe
     }
 
     @IBAction func onDeleteChildProfilePressed(_ sender: UIButton) {
+        
         PopupDialogViewController.showPopup(parentVC: self, from: "EDITCHILD>\(childProfile.childID)")
     }
     
@@ -153,6 +154,11 @@ class EditChildProfileViewController: UIViewController, UINavigationControllerDe
         txtNickName.text = child.childNickName
         txtAge.text = String(child.childAge)
         txtChildName.text = child.childName
+    }
+    
+    public func popupDidDisappear() {
+        print("ds")
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
@@ -182,10 +188,4 @@ extension EditChildProfileViewController : UIImagePickerControllerDelegate{
     }
 }
 
-
-extension EditActivityViewController {
-    
-    
-   
-}
 

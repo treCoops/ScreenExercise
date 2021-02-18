@@ -50,8 +50,22 @@
                                             <segue destination="vgA-IC-ccK" kind="show" id="lEp-ru-bNI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k26-t2-KgG" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-Jk-j34" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="295" height="52"/>
+                                        <color key="backgroundColor" red="0.0039215686274509803" green="0.086274509803921567" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="Jz5-jN-YMR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="16"/>
+                                        <state key="normal" title="Continue as Guest">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="6zZ-ft-Zva" kind="show" id="ayP-da-dvi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k26-t2-KgG" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="144" width="295" height="52"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="qjA-G7-H2o"/>
@@ -64,8 +78,8 @@
                                             <action selector="btnLoginFacebookPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNE-Dp-Ke6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BV-pr-yjA" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="144" width="295" height="52"/>
+                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BV-pr-yjA" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="216" width="295" height="52"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="eJ1-RA-E4P"/>
@@ -76,20 +90,6 @@
                                         </state>
                                         <connections>
                                             <action selector="btnGoogleLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCg-QM-aeg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-Jk-j34" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="216" width="295" height="52"/>
-                                        <color key="backgroundColor" red="0.0039215686274509803" green="0.086274509803921567" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="Jz5-jN-YMR"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="16"/>
-                                        <state key="normal" title="Continue as Guest">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="6zZ-ft-Zva" kind="show" id="ayP-da-dvi"/>
                                         </connections>
                                     </button>
                                 </subviews>

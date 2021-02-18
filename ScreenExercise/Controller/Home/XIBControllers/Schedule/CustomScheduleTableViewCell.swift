@@ -9,6 +9,8 @@ import UIKit
 
 class CustomScheduleTableViewCell: UITableViewCell {
     @IBOutlet weak var viewParent: UIView!
+    @IBOutlet weak var txtActivityName: UILabel!
+    @IBOutlet weak var txtActivityDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +26,7 @@ class CustomScheduleTableViewCell: UITableViewCell {
     
     
     func configXIB(data: XIBCustomSchedule){
-
+        txtActivityName.text = data.activityName
+        txtActivityDescription.text = data.activityDescription
     }
 }

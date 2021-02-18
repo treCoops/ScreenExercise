@@ -67,6 +67,9 @@
 		26842C0625B1632A00241F03 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26842C0525B1632A00241F03 /* ActivityViewController.swift */; };
 		26842C0B25B1648500241F03 /* CornerRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26842C0A25B1648500241F03 /* CornerRoundImageView.swift */; };
 		26842C1F25B16D0000241F03 /* EditActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26842C1E25B16D0000241F03 /* EditActivityViewController.swift */; };
+		26AC301D25D79AF0003BEE3E /* TimeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC301C25D79AF0003BEE3E /* TimeValidator.swift */; };
+		26AC302225D80D3C003BEE3E /* CustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC302125D80D3C003BEE3E /* CustomActivity.swift */; };
+		26AC302F25DD022B003BEE3E /* ChildTimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC302E25DD022B003BEE3E /* ChildTimeSlot.swift */; };
 		26D65C5825CA7A22009F0BBF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D65C5725CA7A22009F0BBF /* FirebaseAuthManager.swift */; };
 		26D65C6025CA7FED009F0BBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26D65C5F25CA7FED009F0BBF /* GoogleService-Info.plist */; };
 		26D65C6825CA8409009F0BBF /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D65C6725CA8409009F0BBF /* UserSession.swift */; };
@@ -164,6 +167,9 @@
 		26842C0525B1632A00241F03 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		26842C0A25B1648500241F03 /* CornerRoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRoundImageView.swift; sourceTree = "<group>"; };
 		26842C1E25B16D0000241F03 /* EditActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditActivityViewController.swift; sourceTree = "<group>"; };
+		26AC301C25D79AF0003BEE3E /* TimeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeValidator.swift; sourceTree = "<group>"; };
+		26AC302125D80D3C003BEE3E /* CustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivity.swift; sourceTree = "<group>"; };
+		26AC302E25DD022B003BEE3E /* ChildTimeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTimeSlot.swift; sourceTree = "<group>"; };
 		26D65C5725CA7A22009F0BBF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		26D65C5F25CA7FED009F0BBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26D65C6725CA8409009F0BBF /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
@@ -349,6 +355,7 @@
 				267F391B25BE9E0D00D2B396 /* EventHandler.swift */,
 				26D65C6725CA8409009F0BBF /* UserSession.swift */,
 				26DAB28B25CA909300EA88A0 /* Validator.swift */,
+				26AC301C25D79AF0003BEE3E /* TimeValidator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -468,6 +475,8 @@
 				26842BC125AEC31F00241F03 /* XIBCategory.swift */,
 				26842BDB25AEEF7B00241F03 /* XIBCustomSchedule.swift */,
 				26842C0025B1557000241F03 /* XIBCategoryTwo.swift */,
+				26AC302125D80D3C003BEE3E /* CustomActivity.swift */,
+				26AC302E25DD022B003BEE3E /* ChildTimeSlot.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -873,6 +882,7 @@
 				26842C1F25B16D0000241F03 /* EditActivityViewController.swift in Sources */,
 				26D65C6825CA8409009F0BBF /* UserSession.swift in Sources */,
 				26465D2025ADAC58001EAC1B /* XIBSchedule.swift in Sources */,
+				26AC301D25D79AF0003BEE3E /* TimeValidator.swift in Sources */,
 				26842BF225B1509E00241F03 /* SelectActivityTwoViewController.swift in Sources */,
 				26D65C5825CA7A22009F0BBF /* FirebaseAuthManager.swift in Sources */,
 				26842BE225AEEFBA00241F03 /* CustomScheduleTableViewCell.swift in Sources */,
@@ -893,6 +903,7 @@
 				26842BF825B1550600241F03 /* CategoryTwoCollectionViewCell.swift in Sources */,
 				2633C29D25C9BF5B002C6E58 /* SettingViewController.swift in Sources */,
 				268216D725AC1CF500E6FF1F /* PhoneNumberViewController.swift in Sources */,
+				26AC302F25DD022B003BEE3E /* ChildTimeSlot.swift in Sources */,
 				26842BB825AEC2F200241F03 /* CategoryCollectionViewCell.swift in Sources */,
 				2633C21725C122CD002C6E58 /* XIBChildProfile.swift in Sources */,
 				2633C29125C9B9D7002C6E58 /* CustomActivityViewController.swift in Sources */,
@@ -909,6 +920,7 @@
 				26465D0425AD699D001EAC1B /* ScheduleViewController.swift in Sources */,
 				26842BAC25AEBAB100241F03 /* SearchUIView.swift in Sources */,
 				2633C2A525C9C278002C6E58 /* UserRegistrationViewController.swift in Sources */,
+				26AC302225D80D3C003BEE3E /* CustomActivity.swift in Sources */,
 				26842BB125AEBCD200241F03 /* CustomTextFieldPlaceholder.swift in Sources */,
 				2633C28625C9ABB4002C6E58 /* PopupDialogViewController.swift in Sources */,
 				268216B125AC15A800E6FF1F /* RoundedUIButton.swift in Sources */,

@@ -7,6 +7,7 @@
 
 import UIKit
 import iOSDropDown
+import RealmSwift
 
 class ScheduleViewController: UIViewController {
     
@@ -23,6 +24,10 @@ class ScheduleViewController: UIViewController {
     
     var Schedules : [XIBSchedule] = []
     var newTimeArray = [String]()
+    var intvalTimeArray = [String]()
+    
+    var selectedTime : String = ""
+    var flag : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,59 +40,110 @@ class ScheduleViewController: UIViewController {
         
         cmbType.optionArray = DropdownArray.cmbType
         cmbStart.optionArray = DropdownArray.cmbTime
-//        cmbEnd.optionArray = DropdownArray.cmbTime
-        cmbInterval.optionArray = DropdownArray.cmbInterval
+        
+        self.autoFill()
         
         cmbStart.didSelect{(selectedText , index ,id) in
+            
+            self.clearTableCustomActivity()
+            
+            
+            if(UserSession.getUserDefault(key: UserSessionKey.KEY_START_TIME) != nil){
+                self.flag = true
+            }
+            
+            if(self.flag){
+                self.cmbEnd.select(0)
+            }
+            self.flag = true
+            
+            UserSession.setString(data: selectedText, key: UserSessionKey.KEY_START_TIME)
+            
+            
+            self.newTimeArray.removeAll()
+            
+            self.newTimeArray = TimeValidator.getEndTimeArray(selectedText: selectedText)
+                                    
+            self.cmbEnd.optionArray = self.newTimeArray
+            
+        }
+        
+        
+        cmbEnd.didSelect{(selectedText, index, id) in
+            
+            self.clearTableCustomActivity()
+
+            self.intvalTimeArray.removeAll()
+            
+            self.selectedTime = selectedText
+        
+            self.cmbInterval.optionArray = TimeValidator.createdIntervals(diff: TimeValidator.getTimeDiff(time1Str: DropdownArray.cmbTime[self.cmbStart.selectedIndex ?? 0], time2Str: self.newTimeArray[index]))
+            
+            UserSession.setString(data: selectedText, key: UserSessionKey.KEY_END_TIME)
+            
+            if(self.cmbInterval.selectedIndex != nil){
                 
-            if(DropdownArray.cmbTime.firstIndex(of: selectedText) == 0){
-                self.newTimeArray.removeAll()
-                for item in DropdownArray.cmbTime {
-                    if(item == selectedText){
-                        continue
-                    }
-                    self.newTimeArray.append(item)
-                }
-                
-            }else{
-                self.newTimeArray.removeAll()
-                var a : Int = DropdownArray.cmbTime.firstIndex(of: selectedText)! + 1
-                while(a <= 23){
-                    self.newTimeArray.append(DropdownArray.cmbTime[a])
-                    a += 1
-                }
-                
-                let b : Int = DropdownArray.cmbTime.firstIndex(of: selectedText)!
-                var c : Int = 0
-                while(c < b){
-                   self.newTimeArray.append(DropdownArray.cmbTime[c])
-                   c += 1
+                if(self.cmbStart.selectedIndex != nil){
+                    self.updateArray(timeSlots: TimeValidator.getTimeIntervaleSlots(startTime: DropdownArray.cmbTime[self.cmbStart.selectedIndex!], endTime: self.selectedTime, interval: DropdownArray.cmbInterval[self.cmbInterval.selectedIndex!]), isAutoLoad: false)
+                }else{
+                    self.updateArray(timeSlots: TimeValidator.getTimeIntervaleSlots(startTime: UserSession.getUserDefault(key: UserSessionKey.KEY_START_TIME)!, endTime: self.selectedTime, interval: DropdownArray.cmbInterval[self.cmbInterval.selectedIndex!]), isAutoLoad: false)
                 }
             }
-                    
-                
-            self.cmbEnd.optionArray = self.newTimeArray
+            
         }
+        
+        cmbInterval.didSelect{(selectedText, index, id) in
+            UserSession.setString(data: selectedText, key: UserSessionKey.KEY_INTERVAL_TIME)
+            self.clearTableCustomActivity()
+            
+            if(self.cmbStart.selectedIndex != nil || self.cmbEnd.selectedIndex != nil){
+                self.updateArray(timeSlots:TimeValidator.getTimeIntervaleSlots(startTime: DropdownArray.cmbTime[self.cmbStart.selectedIndex!], endTime: self.selectedTime, interval: DropdownArray.cmbInterval[self.cmbInterval.selectedIndex!]), isAutoLoad: false)
+            }else {
+                self.updateArray(timeSlots:TimeValidator.getTimeIntervaleSlots(startTime: UserSession.getUserDefault(key: UserSessionKey.KEY_START_TIME)!, endTime: UserSession.getUserDefault(key: UserSessionKey.KEY_END_TIME)!, interval: UserSession.getUserDefault(key: UserSessionKey.KEY_INTERVAL_TIME)!), isAutoLoad: false)
+            }
+        }
+        
         
         tblSchedule.register(UINib(nibName: XIBIdentifier.XIB_SCHEDULE, bundle: nil), forCellReuseIdentifier: XIBIdentifier.XIB_SCHEDULE_CELL)
         
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
-        Schedules.append(XIBSchedule(dummy: "a"))
+    }
+    
+    func updateArray(timeSlots : [String], isAutoLoad: Bool){
         
+        Schedules.removeAll()
         
+        let realm = try! Realm()
+        
+        if(isAutoLoad){
+            feedTable()
+        }else{
+            
+            self.clearTableTimeSlot()
+            
+            for time in timeSlots {
+                let timeSlot = ChildTimeSlot()
+                
+                timeSlot.childID = UserSession.getUserDefault(key: UserSessionKey.ACTIVED_CHILD_ID) ?? ""
+                timeSlot.completeStatus = ""
+                timeSlot.imgRef = ""
+                timeSlot.isAssigned = false
+                timeSlot.time = time
+                timeSlot.task = ""
+                
+                try! realm.write{
+                    realm.add(timeSlot)
+                }
+            }
+            
+            feedTable()
+        }
+        
+        tblSchedule.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.autoFill()
+        tblSchedule.reloadData()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -119,3 +175,84 @@ extension ScheduleViewController : UITableViewDelegate, UITableViewDataSource {
          performSegue(withIdentifier: "ScheduleActivityRowAddSegue", sender: self)
     }
 }
+
+extension ScheduleViewController {
+    
+    func clearTableTimeSlot(){
+        
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.delete(realm.objects(ChildTimeSlot.self))
+        }
+    }
+    
+    func clearTableCustomActivity(){
+        
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.delete(realm.objects(CustomActivity.self))
+        }
+    }
+    
+    func feedTable(){
+        let realm = try! Realm()
+        let timeSlots = realm.objects(ChildTimeSlot.self).filter("childID = %@", UserSession.getUserDefault(key: UserSessionKey.ACTIVED_CHILD_ID) ?? "").sorted(byKeyPath: "created", ascending: true)
+        
+        if(!timeSlots.isEmpty){
+            for times in timeSlots {
+                Schedules.append(XIBSchedule(childID: times.childID, timeSlotId: times.timeID, completeStatus: times.completeStatus, time: times.time, isAssigned: times.isAssigned, task: times.task, imgRef: times.imgRef))
+            }
+        }
+    }
+    
+    func autoFill(){
+        if(UserSession.getUserDefault(key: UserSessionKey.KEY_START_TIME) != nil){
+            cmbStart.text = UserSession.getUserDefault(key: UserSessionKey.KEY_START_TIME)
+            UserSession.setInt(data: DropdownArray.cmbTime.firstIndex(of: UserSession.getString(key: UserSessionKey.KEY_START_TIME)) ?? 0, key: UserSessionKey.START_TIME_INDEX)
+            
+            self.newTimeArray.removeAll()
+            
+            self.newTimeArray = TimeValidator.getEndTimeArray(selectedText: UserSession.getString(key: UserSessionKey.KEY_START_TIME))
+
+            self.cmbEnd.optionArray = self.newTimeArray
+            
+            if(UserSession.getUserDefault(key: UserSessionKey.KEY_END_TIME) != nil){
+                cmbEnd.text = UserSession.getUserDefault(key: UserSessionKey.KEY_END_TIME)
+                UserSession.setInt(data: DropdownArray.cmbTime.firstIndex(of: UserSession.getString(key: UserSessionKey.KEY_END_TIME)) ?? 0, key: UserSessionKey.END_TIME_INDEX)
+                
+                self.intvalTimeArray.removeAll()
+                
+                self.cmbInterval.optionArray = TimeValidator.createdIntervals(diff: TimeValidator.getTimeDiff(time1Str: UserSession.getUserDefault(key: UserSessionKey.KEY_START_TIME)!, time2Str:  UserSession.getUserDefault(key: UserSessionKey.KEY_END_TIME)!))
+                
+                cmbInterval.text = UserSession.getUserDefault(key: UserSessionKey.KEY_INTERVAL_TIME)
+                
+                if(UserSession.getUserDefault(key: UserSessionKey.KEY_INTERVAL_TIME) != nil){
+                    self.updateArray(timeSlots: TimeValidator.getTimeIntervaleSlots(startTime: UserSession.getUserDefault(key: UserSessionKey.KEY_START_TIME)!, endTime:UserSession.getUserDefault(key: UserSessionKey.KEY_END_TIME)!, interval: UserSession.getUserDefault(key: UserSessionKey.KEY_INTERVAL_TIME)!), isAutoLoad: true)
+                }
+            }
+        }
+    }
+}
+
+extension ScheduleViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ScheduleActivityRowAddSegue" {
+
+            if let indexPath = self.tblSchedule.indexPathForSelectedRow {
+                var id: String
+                if (self.tblSchedule == self.searchDisplayController?.searchResultsTableView) {
+                    id = Schedules[indexPath.row].timeSlotId
+                } else {
+                    id = Schedules[indexPath.row].timeSlotId
+                }
+                (segue.destination as! SelectActivityViewController).timeSlotID = id
+            }
+        }
+    }
+}
+
+
+
+

@@ -26,9 +26,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Completed " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-c3-ZoM">
-                                <rect key="frame" x="97" y="18" width="59" height="16"/>
-                                <color key="backgroundColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Not Scheduled " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoB-c3-ZoM">
+                                <rect key="frame" x="97" y="18" width="77.5" height="16"/>
+                                <color key="backgroundColor" red="0.4039215686" green="0.44705882349999998" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="eau-gM-MCp"/>
                                 </constraints>
@@ -76,7 +76,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnAdd" destination="KeP-7i-NAY" id="S6q-uV-Kqq"/>
                 <outlet property="txtStatus" destination="BoB-c3-ZoM" id="jOC-le-jZu"/>
+                <outlet property="txtTask" destination="b1A-At-73H" id="byO-51-5Oz"/>
+                <outlet property="txtTime" destination="qP8-pp-aCl" id="1Hm-s4-HbT"/>
                 <outlet property="viewParent" destination="TyW-MU-Mr8" id="idP-OB-jD8"/>
             </connections>
             <point key="canvasLocation" x="207.24637681159422" y="171.76339285714286"/>

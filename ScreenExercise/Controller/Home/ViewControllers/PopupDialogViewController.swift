@@ -25,6 +25,7 @@ class PopupDialogViewController: UIViewController {
 
                         try! realm.write {
                             realm.delete(obj)
+                            
                             self.dismiss(animated: true, completion: nil)
                         }
                     }
@@ -32,8 +33,35 @@ class PopupDialogViewController: UIViewController {
                 } catch let error {
                     print("error - \(error.localizedDescription)")
                 }
+            } else if(PopupDialogViewController.from == "DELETEACTIVITY"){
+                do {
+                    let realm = try Realm()
+
+                    if let obj = realm.objects(CustomActivity.self).filter("activityID = %@", PopupDialogViewController.id).first {
+
+                        try! realm.write {
+                            realm.delete(obj)
+                        }
+                    }
+                    
+                    if let act = realm.objects(ChildTimeSlot.self).filter("activityID = %@", PopupDialogViewController.id).first {
+                        try! realm.safeWrite {
+                            act.isAssigned = false
+                            act.task = ""
+                        }
+                    }
+
+                    self.dismiss(animated: true, completion: nil)
+                    
+                } catch let error {
+                    print("error - \(error.localizedDescription)")
+                }
             }
+            
+            
         }else if(sender.tag == 2){
+            let editVC = EditChildProfileViewController()
+            editVC.popupDidDisappear()
             self.dismiss(animated: true, completion: nil)
         }
         
@@ -70,3 +98,4 @@ class PopupDialogViewController: UIViewController {
         }
       }
 }
+

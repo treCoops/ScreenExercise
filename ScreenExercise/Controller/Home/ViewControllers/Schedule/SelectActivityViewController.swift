@@ -6,31 +6,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SelectActivityViewController: UIViewController {
     @IBOutlet weak var categoryColloctionView: UICollectionView!
     @IBOutlet weak var tblCustomActivities: UITableView!
     
+    var timeSlotID : String = ""
+    
     var categories : [XIBCategory] = []
+    
     var customActivities : [XIBCustomSchedule] = []
+    var customActivitiesDB : Results<CustomActivity>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tblCustomActivities.register(UINib(nibName: XIBIdentifier.XIB_CUSTOM_SCHEDULE, bundle: nil), forCellReuseIdentifier: XIBIdentifier.XIB_CUSTOM_SCHEDULE_CELL)
-        
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
 
         registerNib()
         categories.append(XIBCategory(dummy: "ab"))
@@ -45,11 +37,33 @@ class SelectActivityViewController: UIViewController {
         categories.append(XIBCategory(dummy: "ab"))
         categories.append(XIBCategory(dummy: "ab"))
       
+        getDataForTableView()
         
         self.categoryColloctionView.reloadData()
-
     }
     
+    func getDataForTableView(){
+        customActivities.removeAll()
+        
+        
+        let realm = try! Realm()
+        
+        customActivitiesDB = realm.objects(CustomActivity.self)
+        
+        for activity in customActivitiesDB {
+            
+            customActivities.append(XIBCustomSchedule(id: activity.activityID, activityName: activity.activityName, activityDescription: activity.activityDescription, timeSlotId: activity.timeSlotId, childID: activity.childId))
+
+        }
+        
+        tblCustomActivities.reloadData()
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getDataForTableView()
+    }
     
     func registerNib() {
         let nib = UINib(nibName: XIBIdentifier.NIB_NAME_CATEGORY_CLASS, bundle: nil)
@@ -63,7 +77,9 @@ class SelectActivityViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func btnCreateCustomActivityPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "SagueCreateCustomActivity", sender: self)
+    }
 }
 
 
@@ -90,6 +106,27 @@ extension SelectActivityViewController : UICollectionViewDataSource {
     
    
     
+}
+
+extension SelectActivityViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewFromSelectActivitySegue" {
+
+            if let indexPath = self.tblCustomActivities.indexPathForSelectedRow {
+                var id: String
+                if (self.tblCustomActivities == self.searchDisplayController?.searchResultsTableView) {
+                    id = customActivities[indexPath.row].id
+                } else {
+                    id = customActivities[indexPath.row].id
+                }
+                (segue.destination as! CustomActivityViewController).activityID = id
+            }
+        }
+        
+        if segue.identifier == "SagueCreateCustomActivity" {
+            (segue.destination as! CreateActivityViewController).timeSlotID = self.timeSlotID
+        }
+    }
 }
 
 extension SelectActivityViewController : UICollectionViewDelegateFlowLayout {

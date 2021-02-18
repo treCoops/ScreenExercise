@@ -8,5 +8,10 @@
 import Foundation
 
 struct XIBCustomSchedule {
-    var dummy: String
+    var id: String
+    var activityName: String
+    var activityDescription : String
+    var timeSlotId : String
+    var childID : String
+    
 }

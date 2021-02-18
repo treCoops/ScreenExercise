@@ -7,6 +7,7 @@
 
 import UIKit
 import iOSDropDown
+import RealmSwift
 
 class SelectActivityTwoViewController: UIViewController {
 
@@ -14,9 +15,10 @@ class SelectActivityTwoViewController: UIViewController {
     @IBOutlet weak var colCategory: UICollectionView!
     @IBOutlet weak var cmbCategory: DropDown!
     
+    var categories : [XIBCategoryTwo] = []
     
     var customActivities : [XIBCustomSchedule] = []
-    var categories : [XIBCategoryTwo] = []
+    var customActivitiesDB : Results<CustomActivity>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +26,7 @@ class SelectActivityTwoViewController: UIViewController {
         tblCustomActivities.register(UINib(nibName: XIBIdentifier.XIB_CUSTOM_SCHEDULE, bundle: nil), forCellReuseIdentifier: XIBIdentifier.XIB_CUSTOM_SCHEDULE_CELL)
         
         cmbCategory.optionArray = DropdownArray.cmbCategory
-        
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        customActivities.append(XIBCustomSchedule(dummy: "a"))
-        
-        
+       
         registerNib()
         categories.append(XIBCategoryTwo(dummy: "ab"))
         categories.append(XIBCategoryTwo(dummy: "ab"))
@@ -53,9 +41,33 @@ class SelectActivityTwoViewController: UIViewController {
         categories.append(XIBCategoryTwo(dummy: "ab"))
       
         
+        getDataForTableView()
+        
         self.colCategory.reloadData()
 
    
+    }
+    @IBAction func btnCreateCustomActivityPressed(_ sender: UIButton) {
+        
+    }
+    
+    func getDataForTableView(){
+        customActivities.removeAll()
+        
+        
+        let realm = try! Realm()
+        
+        customActivitiesDB = realm.objects(CustomActivity.self)
+        
+        for activity in customActivitiesDB {
+            
+//            customActivities.append(XIBCustomSchedule(id: activity.activityID, activityName: activity.activityName, activityDescription: activity.activityDescription))
+            customActivities.append(XIBCustomSchedule(id: activity.activityID, activityName: activity.activityName, activityDescription: activity.activityDescription, timeSlotId: activity.timeSlotId, childID: activity.childId))
+        }
+        
+        tblCustomActivities.reloadData()
+        
+        
     }
 
     func registerNib() {
@@ -64,6 +76,10 @@ class SelectActivityTwoViewController: UIViewController {
         if let flowLayout = self.colCategory?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 4, height: 4)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getDataForTableView()
     }
     
     @IBAction func btnBackPressed(_ sender: UIButton) {
@@ -111,7 +127,7 @@ extension SelectActivityTwoViewController : UICollectionViewDelegateFlowLayout {
 //        return CGSize(width: 100, height: 100)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
            return 20
        }
 
@@ -120,7 +136,7 @@ extension SelectActivityTwoViewController : UICollectionViewDelegateFlowLayout {
        }
 
        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+           return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
        }
     
 }
@@ -148,5 +164,28 @@ extension SelectActivityTwoViewController : UITableViewDelegate, UITableViewData
          performSegue(withIdentifier: "ViewFromSelectActivityTwoSegue", sender: self)
     }
     
-    
 }
+
+extension SelectActivityTwoViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ViewFromSelectActivityTwoSegue" {
+
+            if let indexPath = self.tblCustomActivities.indexPathForSelectedRow {
+                var id: String
+                if (self.tblCustomActivities == self.searchDisplayController?.searchResultsTableView) {
+                    id = customActivities[indexPath.row].id
+                    print(id)
+                } else {
+                    id = customActivities[indexPath.row].id
+                    print(id)
+                }
+                (segue.destination as! CustomActivityViewController).activityID = id
+            }
+        }
+        
+//        if segue.identifier == "SagueCreateCustomActivityTwo" {
+//            (segue.destination as! CreateActivityViewController).timeSlotID = //ChildTimeSlot
+//        }
+    }
+}
+

@@ -60,8 +60,6 @@ extension ChildProfileViewController : UITableViewDelegate, UITableViewDataSourc
             cell.alpha = 1
         })
         
-        
-        
         let clearView = UIView()
         UIView().backgroundColor = UIColor.clear
         UITableViewCell.appearance().selectedBackgroundView = clearView

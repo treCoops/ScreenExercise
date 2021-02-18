@@ -20,4 +20,21 @@ class UserSession {
     static func set(data: Bool, key: String){
         UserDefaults.standard.set(data, forKey: key)
     }
+    
+    static func setString(data: String, key: String){
+        UserDefaults.standard.set(data, forKey: key)
+    }
+    
+    static func setInt(data: Int, key: String){
+        UserDefaults.standard.set(data, forKey: key)
+    }
+    
+    static func getString(key: String) -> String {
+        return UserDefaults.standard.string(forKey: key) ?? ""
+    }
+    
+    static func getInt(key: String) -> Int {
+        return UserDefaults.standard.integer(forKey: key) 
+    }
+    
 }

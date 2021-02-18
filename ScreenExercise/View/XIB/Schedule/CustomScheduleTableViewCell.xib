@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="395" height="95"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-Rt-Nrb">
-                                <rect key="frame" x="15" y="40" width="300" height="34"/>
+                                <rect key="frame" x="15" y="40" width="300" height="40"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <color key="textColor" red="0.40392156862745099" green="0.44705882352941173" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -60,6 +60,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="O3i-Rt-Nrb" secondAttribute="trailing" constant="80" id="0v3-Yl-2pm"/>
                             <constraint firstItem="vI0-Km-wWd" firstAttribute="top" secondItem="b7T-64-wXp" secondAttribute="top" constant="20" id="1wL-xv-nvB"/>
+                            <constraint firstAttribute="bottom" secondItem="O3i-Rt-Nrb" secondAttribute="bottom" constant="15" id="4hz-PC-asL"/>
                             <constraint firstItem="O3i-Rt-Nrb" firstAttribute="top" secondItem="b7T-64-wXp" secondAttribute="top" constant="40" id="6fa-49-rjL"/>
                             <constraint firstItem="O3i-Rt-Nrb" firstAttribute="leading" secondItem="b7T-64-wXp" secondAttribute="leading" constant="15" id="FSW-VA-8z3"/>
                             <constraint firstItem="vI0-Km-wWd" firstAttribute="leading" secondItem="Fb6-iL-hn8" secondAttribute="trailing" constant="20" id="M6A-PI-qAY"/>
@@ -79,6 +80,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="txtActivityDescription" destination="O3i-Rt-Nrb" id="hQc-aC-M1t"/>
+                <outlet property="txtActivityName" destination="Fb6-iL-hn8" id="ZFw-qF-k7p"/>
                 <outlet property="viewParent" destination="b7T-64-wXp" id="BwZ-tH-qeY"/>
             </connections>
             <point key="canvasLocation" x="192.0289855072464" y="173.10267857142856"/>

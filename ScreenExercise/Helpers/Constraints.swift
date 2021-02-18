@@ -34,8 +34,8 @@ struct XIBIdentifier {
 struct DropdownArray {
     static var cmbType = ["All", "Upcoming", "Completed", "Incompleted", "Not Scheduled"]
     static var cmbTime = [
-        "00:00AM", "01:00AM", "02:00AM", "03:00AM", "04:00AM", "05:00AM", "06:00AM", "07:00AM", "08:00AM", "09:00AM", "10:00AM", "11:00AM", "12:00PM",
-        "01:00PM", "02:00PM", "03:00PM", "04:00PM", "05:00PM", "06:00PM", "07:00PM", "08:00PM", "09:00PM", "10:00PM", "11:00PM"
+        "00:00 AM", "01:00 AM", "02:00 AM", "03:00 AM", "04:00 AM", "05:00 AM", "06:00 AM", "07:00 AM", "08:00 AM", "09:00 AM", "10:00 AM", "11:00 AM", "12:00 PM",
+        "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM", "05:00 PM", "06:00 PM", "07:00 PM", "08:00 PM", "09:00 PM", "10:00 PM", "11:00 PM"
     ]
     static var cmbInterval = [
         "30 minutes", "45 minutes", "1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours"
@@ -46,4 +46,15 @@ struct DropdownArray {
 
 struct UserSessionKey {
     static var KEY_VERIFICATION_ID = "KEY_VERIFICATION_ID"
+    
+    static var KEY_START_TIME = "KEY_START_TIME"
+    static var KEY_END_TIME = "KEY_END_TIME"
+    static var KEY_INTERVAL_TIME = "KEY_INTERVAL_TIME"
+    
+    static var START_TIME_INDEX = "START_TIME_INDEX"
+    static var END_TIME_INDEX = "END_TIME_INDEX"
+    static var INTERVAL_TIME_INDEX = "INTERVAL_TIME_INDEX"
+    
+    static var ACTIVED_CHILD_ID = "ACTIVED_CHILD_ID"
+    
 }
