@@ -126,6 +126,10 @@ extension SelectActivityViewController {
         if segue.identifier == "SagueCreateCustomActivity" {
             (segue.destination as! CreateActivityViewController).timeSlotID = self.timeSlotID
         }
+        
+        if segue.identifier == "ActivitySegue" {
+            (segue.destination as! SelectActivityTwoViewController).timeSlotID = self.timeSlotID
+        }
     }
 }
 

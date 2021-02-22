@@ -20,6 +20,8 @@ class SelectActivityTwoViewController: UIViewController {
     var customActivities : [XIBCustomSchedule] = []
     var customActivitiesDB : Results<CustomActivity>!
     
+    var timeSlotID : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,7 +50,7 @@ class SelectActivityTwoViewController: UIViewController {
    
     }
     @IBAction func btnCreateCustomActivityPressed(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "SagueCreateCustomActivityTwo", sender: self)
     }
     
     func getDataForTableView(){
@@ -181,6 +183,10 @@ extension SelectActivityTwoViewController {
                 }
                 (segue.destination as! CustomActivityViewController).activityID = id
             }
+        }
+        
+        if segue.identifier == "SagueCreateCustomActivityTwo" {
+            (segue.destination as! CreateActivityViewController).timeSlotID = self.timeSlotID
         }
         
 //        if segue.identifier == "SagueCreateCustomActivityTwo" {
