@@ -6,19 +6,23 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CategoryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var viewParent: CustomRoundedView!
     @IBOutlet weak var lab: UILabel!
+    @IBOutlet weak var imgCategory: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
-        viewParent.roundCornerWithShadow()
+        viewParent.roundCornerWithShadowCollectionViewCell()
+        imgCategory.roundImageForCollectionView()
+
     }
     
-    func configureCell(Data: XIBCategory) {
-       
+    func configureCell(Data: XIBCategory){
+        lab.text = Data.name
+        imgCategory.kf.setImage(with: URL(string: Data.image))
     }
 }

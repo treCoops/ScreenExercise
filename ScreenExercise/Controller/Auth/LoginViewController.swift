@@ -15,6 +15,7 @@ import FacebookLogin
 class LoginViewController: UIViewController {
     
     var loginButton : FBLoginButton!
+    var apiHelper = APIHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,15 @@ class LoginViewController: UIViewController {
         loginButton.delegate = self
         loginButton.isHidden = true
         loginButton.permissions = ["email"]
+        
+        apiHelper.delagate = self
+        
+//        apiHelper.createUser(name: "test", email: "trevogayan@gmail.com", phone: "0777123456", type: "1", comments: "This is test", provider: "Dialog")
+//        apiHelper.getAllUsers()
+//        apiHelper.updateUser(token: "4", name: "Somasiri", email: "somaa@gmail.com", phone: "0777777771", provider: "Verizon")
+//        apiHelper.getUserDetails(token: "4")
+        apiHelper.getCategories()
+//        apiHelper.getActivities()
         
     }
     
@@ -89,5 +99,26 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     
+}
+
+extension LoginViewController: API {
+    func response(status: Int, message: String){
+        print("Response from create user : \(status) <> \(message)")
+    }
+    func response(status: Int, message: String, data: [User]){
+        print("Response from create user : \(status) <> \(message)")
+        print("Data : \(data)")
+    }
+    func response(status: Int, message: String, user: User){
+        print(user.provider)
+    }
+    
+    func error(error: Error){
+        print("Response from error : \(error)")
+    }
+    
+    func error(error: String){
+        print("Response from error : \(error)")
+    }
 }
 

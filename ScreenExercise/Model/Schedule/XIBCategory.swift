@@ -9,5 +9,8 @@ import Foundation
 
 
 struct XIBCategory {
-    var dummy: String
+    var id: Int
+    var name: String
+    var image: String
+    var type: Int
 }

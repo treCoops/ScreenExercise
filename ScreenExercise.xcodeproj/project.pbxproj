@@ -67,6 +67,10 @@
 		26842C0625B1632A00241F03 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26842C0525B1632A00241F03 /* ActivityViewController.swift */; };
 		26842C0B25B1648500241F03 /* CornerRoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26842C0A25B1648500241F03 /* CornerRoundImageView.swift */; };
 		26842C1F25B16D0000241F03 /* EditActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26842C1E25B16D0000241F03 /* EditActivityViewController.swift */; };
+		268E651625E4DF07009AA9A2 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E651525E4DF07009AA9A2 /* APIHelper.swift */; };
+		268E653D25E60DB1009AA9A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E653C25E60DB1009AA9A2 /* User.swift */; };
+		268E654525E63179009AA9A2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E654425E63179009AA9A2 /* Category.swift */; };
+		268E654F25E677AE009AA9A2 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E654E25E677AE009AA9A2 /* Activity.swift */; };
 		26AC301D25D79AF0003BEE3E /* TimeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC301C25D79AF0003BEE3E /* TimeValidator.swift */; };
 		26AC302225D80D3C003BEE3E /* CustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC302125D80D3C003BEE3E /* CustomActivity.swift */; };
 		26AC302F25DD022B003BEE3E /* ChildTimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AC302E25DD022B003BEE3E /* ChildTimeSlot.swift */; };
@@ -167,6 +171,10 @@
 		26842C0525B1632A00241F03 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		26842C0A25B1648500241F03 /* CornerRoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRoundImageView.swift; sourceTree = "<group>"; };
 		26842C1E25B16D0000241F03 /* EditActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditActivityViewController.swift; sourceTree = "<group>"; };
+		268E651525E4DF07009AA9A2 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		268E653C25E60DB1009AA9A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		268E654425E63179009AA9A2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		268E654E25E677AE009AA9A2 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		26AC301C25D79AF0003BEE3E /* TimeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeValidator.swift; sourceTree = "<group>"; };
 		26AC302125D80D3C003BEE3E /* CustomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivity.swift; sourceTree = "<group>"; };
 		26AC302E25DD022B003BEE3E /* ChildTimeSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTimeSlot.swift; sourceTree = "<group>"; };
@@ -356,6 +364,7 @@
 				26D65C6725CA8409009F0BBF /* UserSession.swift */,
 				26DAB28B25CA909300EA88A0 /* Validator.swift */,
 				26AC301C25D79AF0003BEE3E /* TimeValidator.swift */,
+				268E651525E4DF07009AA9A2 /* APIHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -381,6 +390,7 @@
 		268216A825AC146E00E6FF1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				268E653B25E60DA0009AA9A2 /* APIModel */,
 				2633C20A25C11D22002C6E58 /* ChildProfile */,
 				2633C1F525BFF9C5002C6E58 /* Leaderboard */,
 				26842BC025AEC30600241F03 /* Schedule */,
@@ -477,8 +487,18 @@
 				26842C0025B1557000241F03 /* XIBCategoryTwo.swift */,
 				26AC302125D80D3C003BEE3E /* CustomActivity.swift */,
 				26AC302E25DD022B003BEE3E /* ChildTimeSlot.swift */,
+				268E654425E63179009AA9A2 /* Category.swift */,
+				268E654E25E677AE009AA9A2 /* Activity.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		268E653B25E60DA0009AA9A2 /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+				268E653C25E60DB1009AA9A2 /* User.swift */,
+			);
+			path = APIModel;
 			sourceTree = "<group>";
 		};
 		26D65C5625CA7A11009F0BBF /* Auth */ = {
@@ -872,6 +892,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268E651625E4DF07009AA9A2 /* APIHelper.swift in Sources */,
 				2682170925AC2A8D00E6FF1F /* RoundedUITextField.swift in Sources */,
 				2633C20325BFFA1F002C6E58 /* XIBLeaderboard.swift in Sources */,
 				26842BC225AEC31F00241F03 /* XIBCategory.swift in Sources */,
@@ -914,6 +935,7 @@
 				26465CF325AD60D7001EAC1B /* HomeUITabBarController.swift in Sources */,
 				2633C27C25C9A472002C6E58 /* ViewChildProfileViewController.swift in Sources */,
 				2633C21D25C1230A002C6E58 /* ChildProfileTableViewCell.swift in Sources */,
+				268E653D25E60DB1009AA9A2 /* User.swift in Sources */,
 				26842BA425AEB71600241F03 /* SelectActivityViewController.swift in Sources */,
 				2633C28125C9A904002C6E58 /* EditChildProfileViewController.swift in Sources */,
 				26842C0625B1632A00241F03 /* ActivityViewController.swift in Sources */,
@@ -923,8 +945,10 @@
 				26AC302225D80D3C003BEE3E /* CustomActivity.swift in Sources */,
 				26842BB125AEBCD200241F03 /* CustomTextFieldPlaceholder.swift in Sources */,
 				2633C28625C9ABB4002C6E58 /* PopupDialogViewController.swift in Sources */,
+				268E654F25E677AE009AA9A2 /* Activity.swift in Sources */,
 				268216B125AC15A800E6FF1F /* RoundedUIButton.swift in Sources */,
 				260B14F125B804610032F30A /* AppRefreshOperation.swift in Sources */,
+				268E654525E63179009AA9A2 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,12 @@ extension UIImageView{
         self.clipsToBounds = true
     }
     
+    func roundImageForCollectionView(){
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = self.frame.height / 16
+        self.clipsToBounds = true
+    }
+    
     func roundImageViewForXIB(){
         self.layer.borderWidth = 5
         self.layer.masksToBounds = false

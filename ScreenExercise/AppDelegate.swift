@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     let appRefresher = AppRefreshOperation()
     
+    var backgroundTaskId: UIBackgroundTaskIdentifier = .invalid
+    
     func userNotificationCenter(
            _ center: UNUserNotificationCenter,
            willPresent notification: UNNotification,
@@ -39,43 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         
         
-        let childProfile = ChildProfile()
-        childProfile.childName = "Trevo"
-        childProfile.childNickName = "treCoops"
-        childProfile.childAge = 12
-        childProfile.childGender = "Male"
-        
-//        let data = NSData(data: UIImage(named: ""))
-//
-//        let data = NSData(data: self.imgChildProfilePicture.image!.jpegData(compressionQuality: 0.5)!)
-//        let imgPNG = UIImage(data: data as Data)!
-//
-//        let dataPNGImg = NSData(data: imgPNG.pngData()!)
-
-//        childProfile.profileImage = dataPNGImg
-        
-//        do {
-//            let realm = try! Realm()
-//            
-//            try! realm.write{
-//                realm.add(childProfile)
-//            }
-//        
-//        } catch {
-//            print("Realm Error : \(error)");
-//        }
-//        
-//        var childers : Results<ChildProfile>!
-//        
-//        let realm = try! Realm()
-//        childers = realm.objects(ChildProfile.self)
-//        print(childers.count)
-//        
-//        for childaaers in childers {
-//         
-//            print("Model Course = \(childaaers.childAge)")
-//
-//        }
+        self.executeAfterDelay(delay: 0.1, completion: {
+            print("asd")
+        })
         
     
         return true
@@ -96,6 +64,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     
+    }
+    
+    func executeAfterDelay(delay: TimeInterval, completion: @escaping(()->Void)){
+//        backgroundTaskId = UIApplication.shared.beginBackgroundTask(
+//            withName: "BackgroundSound",
+//            expirationHandler: {[weak self] in
+//                if let taskId = self?.backgroundTaskId{
+//                    UIApplication.shared.endBackgroundTask(taskId)
+//                }
+//            })
+//
+//        let startTime = Date()
+//        DispatchQueue.global(qos: .background).async {
+//            while Date().timeIntervalSince(startTime) < delay{
+//                Thread.sleep(forTimeInterval: 0.01)
+//            }
+//            DispatchQueue.main.async {[weak self] in
+//                completion()
+//                if let taskId = self?.backgroundTaskId{
+//                    UIApplication.shared.endBackgroundTask(taskId)
+//                }
+//            }
+//        }
+        
+//        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (t) in
+//
+//           print("time")
+//        }
     }
 
 

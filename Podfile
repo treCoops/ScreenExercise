@@ -19,6 +19,8 @@ target 'ScreenExercise' do
   pod ‘FacebookLogin’
   pod ‘FBSDKCoreKit’
   pod ‘FBSDKLoginKit’
+  pod 'Alamofire', '~> 5.2'
+  pod 'SwiftyJSON', '~> 4.0'
 
 
 

@@ -34,6 +34,14 @@ extension UIView {
         self.layer.cornerRadius = 20
     }
     
+    func roundCornerWithShadowCollectionViewCell(){
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOpacity = 0.0
+        self.layer.shadowOffset = CGSize(width: 2, height: 2)
+        self.layer.shadowRadius = 20
+        self.layer.cornerRadius = 20
+    }
+    
     func roundCornerWithOutLine(){
         self.layer.cornerRadius = 20
         self.layer.borderWidth = 3

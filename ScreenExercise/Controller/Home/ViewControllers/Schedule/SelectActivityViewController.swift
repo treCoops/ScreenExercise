@@ -15,6 +15,7 @@ class SelectActivityViewController: UIViewController {
     var timeSlotID : String = ""
     
     var categories : [XIBCategory] = []
+    var categoriesDB : Results<Category>!
     
     var customActivities : [XIBCustomSchedule] = []
     var customActivitiesDB : Results<CustomActivity>!
@@ -25,19 +26,20 @@ class SelectActivityViewController: UIViewController {
         tblCustomActivities.register(UINib(nibName: XIBIdentifier.XIB_CUSTOM_SCHEDULE, bundle: nil), forCellReuseIdentifier: XIBIdentifier.XIB_CUSTOM_SCHEDULE_CELL)
 
         registerNib()
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
-        categories.append(XIBCategory(dummy: "ab"))
       
+        getCategories()
         getDataForTableView()
+    }
+    
+    func getCategories(){
+        categories.removeAll()
+        
+        let realm = try! Realm()
+        categoriesDB = realm.objects(Category.self)
+        
+        for cate in categoriesDB {
+            categories.append(XIBCategory(id: cate.id, name: cate.name, image: cate.image, type: cate.type))
+        }
         
         self.categoryColloctionView.reloadData()
     }
@@ -167,7 +169,6 @@ extension SelectActivityViewController : UICollectionViewDelegateFlowLayout {
     
     
 }
-
 
 extension SelectActivityViewController : UITableViewDelegate, UITableViewDataSource {
     
