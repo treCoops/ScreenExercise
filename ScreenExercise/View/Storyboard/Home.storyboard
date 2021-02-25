@@ -1776,14 +1776,8 @@
                                                         <color key="textColor" red="0.40392156862745099" green="0.44705882352941173" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="char" translatesAutoresizingMaskIntoConstraints="NO" id="JSe-f8-XAz" customClass="CornerRoundImageView" customModule="ScreenExercise" customModuleProvider="target">
-                                                        <rect key="frame" x="15" y="144" width="345" height="437"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="437" id="3vE-up-ao2"/>
-                                                        </constraints>
-                                                    </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52F-Ra-iO8" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                                        <rect key="frame" x="15" y="601" width="345" height="52"/>
+                                                        <rect key="frame" x="15" y="642" width="345" height="52"/>
                                                         <color key="backgroundColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="52" id="cVw-qV-MjW"/>
@@ -1792,21 +1786,28 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-qY-5qS" customClass="AnimationView">
+                                                        <rect key="frame" x="15" y="144" width="345" height="478"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="478" id="fRT-KT-vov"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="Fhh-qY-5qS" firstAttribute="leading" secondItem="lw2-dT-k1b" secondAttribute="leading" constant="15" id="3I1-pU-jRe"/>
                                                     <constraint firstAttribute="trailing" secondItem="Lm1-Qt-Fnp" secondAttribute="trailing" constant="15" id="3Wt-V1-dkl"/>
-                                                    <constraint firstAttribute="trailing" secondItem="JSe-f8-XAz" secondAttribute="trailing" constant="15" id="6Pe-X7-Gnw"/>
+                                                    <constraint firstItem="52F-Ra-iO8" firstAttribute="top" secondItem="Fhh-qY-5qS" secondAttribute="bottom" constant="20" id="MNj-3E-E2F"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Fhh-qY-5qS" secondAttribute="trailing" constant="15" id="OTd-3K-o6q"/>
                                                     <constraint firstItem="Lm1-Qt-Fnp" firstAttribute="leading" secondItem="lw2-dT-k1b" secondAttribute="leading" constant="15" id="TbR-k9-K2M"/>
+                                                    <constraint firstItem="Fhh-qY-5qS" firstAttribute="top" secondItem="Lm1-Qt-Fnp" secondAttribute="bottom" constant="15" id="VQj-ku-dZa"/>
                                                     <constraint firstItem="52F-Ra-iO8" firstAttribute="leading" secondItem="lw2-dT-k1b" secondAttribute="leading" constant="15" id="c5W-OO-xqR"/>
-                                                    <constraint firstItem="52F-Ra-iO8" firstAttribute="top" secondItem="JSe-f8-XAz" secondAttribute="bottom" constant="20" id="efi-Ou-ohP"/>
-                                                    <constraint firstItem="JSe-f8-XAz" firstAttribute="leading" secondItem="lw2-dT-k1b" secondAttribute="leading" constant="15" id="ep6-kf-jSq"/>
                                                     <constraint firstItem="FcZ-90-af0" firstAttribute="leading" secondItem="lw2-dT-k1b" secondAttribute="leading" constant="15" id="jNh-TL-htV"/>
                                                     <constraint firstItem="Lm1-Qt-Fnp" firstAttribute="top" secondItem="FcZ-90-af0" secondAttribute="bottom" constant="15" id="lwN-zK-MFm"/>
                                                     <constraint firstAttribute="trailing" secondItem="52F-Ra-iO8" secondAttribute="trailing" constant="15" id="o6U-Jg-kDv"/>
                                                     <constraint firstItem="FcZ-90-af0" firstAttribute="top" secondItem="lw2-dT-k1b" secondAttribute="top" constant="20" id="sp0-GB-iRG"/>
                                                     <constraint firstAttribute="height" constant="752" id="vMb-0l-ltg"/>
-                                                    <constraint firstItem="JSe-f8-XAz" firstAttribute="top" secondItem="Lm1-Qt-Fnp" secondAttribute="bottom" constant="15" id="ygk-dc-Qfe"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1841,6 +1842,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AAT-uD-i6Q"/>
+                    <connections>
+                        <outlet property="animationView" destination="Fhh-qY-5qS" id="rxh-8I-8Hr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="756-jC-Jl3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2737,7 +2741,6 @@
         <image name="button_add" width="1140" height="156"/>
         <image name="call" width="85.333335876464844" height="85.333335876464844"/>
         <image name="camera" width="20" height="18"/>
-        <image name="char" width="1140" height="1305"/>
         <image name="crown" width="42" height="36.666667938232422"/>
         <image name="email" width="85.333335876464844" height="85.333335876464844"/>
         <image name="leaderboard_icon" width="20" height="20"/>

@@ -21,6 +21,7 @@ target 'ScreenExercise' do
   pod ‘FBSDKLoginKit’
   pod 'Alamofire', '~> 5.2'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'lottie-ios'
 
 
 

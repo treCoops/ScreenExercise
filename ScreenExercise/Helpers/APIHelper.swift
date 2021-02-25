@@ -143,6 +143,7 @@ class APIHelper{
                     case .success(let value):
                         let json = JSON(value)
                         self.clearTableCategory()
+                        self.clearTableActivity()
                         if let body = json["body"].arrayObject{
                             for cate in body {
                                 guard let innerDict = cate as? [String: Any] else {
@@ -229,6 +230,16 @@ class APIHelper{
         
         try! realm.write {
             realm.delete(realm.objects(Category.self))
+        }
+    }
+    
+    
+    func clearTableActivity(){
+        
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.delete(realm.objects(Activity.self))
         }
     }
 }
