@@ -128,13 +128,8 @@ class APIHelper{
     }
     
     func getCategories(){
+        
         let url = "\(BaseURL)/api/category/all"
-        let destination: DownloadRequest.Destination = { _, _ in
-            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                let fileURL = documentsURL.appendingPathComponent("ScreenExercise/lottie")
-
-                return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-        }
         
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .validate()
@@ -172,51 +167,51 @@ class APIHelper{
                                         }
                                         
                                         DispatchQueue.main.async{
-                                            AF.download(
-                                                innerDict["link"] as! String,
-                                                method: .get,
-                                                parameters: nil,
-                                                encoding: JSONEncoding.default,
-                                                headers: nil,
-                                                to: destination).downloadProgress(closure: { (progress) in
-                            
-                                                }).response(completionHandler: { (DefaultDownloadResponse) in
-//                                                    print("Local URL : \(DefaultDownloadResponse.fileURL!.absoluteString)/\(self.getLottieName(url: innerDict["link"] as! String))")
-                                                    
-//                                                    print(innerDict["id"] as! Int)
-//                                                    print(innerDict["name"] as! String )
-//                                                    print(innerDict["category_id"] as! Int)
-//                                                    print(innerDict["description"] as! String )
-//                                                    print(innerDict["status"] as! Int)
-//                                                    print(innerDict["used_count"] as! Int)
-                                                    
+                                            
+                                            let destination: DownloadRequest.Destination = { _, _ in
+                                                let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                                                let fileURL = documentsURL.appendingPathComponent("ScreenExercise/\(self.getLottieName(url: innerDict["link"] as! String))")
+
+                                                return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+                                            }
+                                            
+                                            
+                                            AF.download(innerDict["link"] as! String, to: destination).response { response in
+                                                if response.error == nil, let jsonPath = response.fileURL?.path {
+
                                                     let activity = Activity()
                                                     activity.category_id = innerDict["category_id"] as! Int
 //                                                    activity.des = innerDict["description"] as! String
                                                     activity.fileName = self.getLottieName(url: innerDict["link"] as! String)
-                                                    activity.filePath = "\(DefaultDownloadResponse.fileURL!.absoluteString)/\(self.getLottieName(url: innerDict["link"] as! String))"
+                                                    activity.filePath = jsonPath
                                                     activity.id = innerDict["id"] as! Int
-                                                    activity.link = DefaultDownloadResponse.fileURL!.absoluteString
+                                                    activity.link = innerDict["link"] as! String
                                                     activity.name = innerDict["name"] as! String
 //                                                    activity.status = innerDict["status"] as! Int
 //                                                    activity.used_count = innerDict["used_count"] as! Int
-                                                    
+
                                                     try! realm.write{
                                                         realm.add(activity)
                                                         print("Activity cached success!")
                                                     }
-                                                })
+                                                    
+                                                }
+                                            }
+                                            
                                         }
                                     }
                                 }
                             }
-                          
+                            
                         }
                     case .failure(let error):
                         print(error)
                         self.delagate?.error(error: error)
                     }
             })
+        
+        
+
     }
     
     func getLottieName(url: String) -> String{
