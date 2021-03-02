@@ -16,11 +16,12 @@ class SelectActivityTwoViewController: UIViewController {
     @IBOutlet weak var cmbCategory: DropDown!
     
     var categories : [XIBCategoryTwo] = []
+    var activitiesDB : Results<Activity>!
     
     var customActivities : [XIBCustomSchedule] = []
     var customActivitiesDB : Results<CustomActivity>!
     
-    var timeSlotID : String = ""
+    var refDictionary = [String: Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +30,12 @@ class SelectActivityTwoViewController: UIViewController {
         
         cmbCategory.optionArray = DropdownArray.cmbCategory
        
-        registerNib()
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-        categories.append(XIBCategoryTwo(dummy: "ab"))
-      
+        
+        print(refDictionary)
         
         getDataForTableView()
+        getDataForCollectionView(id: refDictionary["categoryID"] as! Int)
         
-        self.colCategory.reloadData()
 
    
     }
@@ -61,15 +51,31 @@ class SelectActivityTwoViewController: UIViewController {
         
         customActivitiesDB = realm.objects(CustomActivity.self)
         
+        
         for activity in customActivitiesDB {
-            
-//            customActivities.append(XIBCustomSchedule(id: activity.activityID, activityName: activity.activityName, activityDescription: activity.activityDescription))
             customActivities.append(XIBCustomSchedule(id: activity.activityID, activityName: activity.activityName, activityDescription: activity.activityDescription, timeSlotId: activity.timeSlotId, childID: activity.childId))
         }
         
         tblCustomActivities.reloadData()
         
         
+    }
+    
+    func getDataForCollectionView(id: Int){
+        
+        registerNib()
+        
+        categories.removeAll()
+        
+        let realm = try! Realm()
+        
+        activitiesDB = realm.objects(Activity.self).filter("category_id == \(id)")
+        
+        for activity in activitiesDB {
+            categories.append(XIBCategoryTwo(id: activity.id, name: activity.name, link: activity.link, des: activity.des, category_id: activity.category_id, status: activity.status, used_count: activity.used_count, filePath: activity.filePath, fileName: activity.fileName))
+        }
+        
+        self.colCategory.reloadData()
     }
 
     func registerNib() {
@@ -173,25 +179,21 @@ extension SelectActivityTwoViewController {
         if segue.identifier == "ViewFromSelectActivityTwoSegue" {
 
             if let indexPath = self.tblCustomActivities.indexPathForSelectedRow {
-                var id: String
-                if (self.tblCustomActivities == self.searchDisplayController?.searchResultsTableView) {
-                    id = customActivities[indexPath.row].id
-                    print(id)
-                } else {
-                    id = customActivities[indexPath.row].id
-                    print(id)
-                }
-                (segue.destination as! CustomActivityViewController).activityID = id
+                (segue.destination as! CustomActivityViewController).activityID = customActivities[indexPath.row].id
             }
         }
         
         if segue.identifier == "SagueCreateCustomActivityTwo" {
-            (segue.destination as! CreateActivityViewController).timeSlotID = self.timeSlotID
+            (segue.destination as! CreateActivityViewController).timeSlotID = self.refDictionary["timeSlotID"] as! String
         }
         
-//        if segue.identifier == "SagueCreateCustomActivityTwo" {
-//            (segue.destination as! CreateActivityViewController).timeSlotID = //ChildTimeSlot
-//        }
+        if segue.identifier == "SpecificActivitySegue" {
+            
+            if let indexPath = self.colCategory.indexPathsForSelectedItems?.first {
+                
+                (segue.destination as! ActivityViewController).refDictionary = ["CategoryID": self.refDictionary["categoryID"] ?? "", "activityID": categories[indexPath.row].id]
+            }
+        }
     }
 }
 

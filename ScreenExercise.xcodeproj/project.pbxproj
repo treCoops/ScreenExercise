@@ -79,6 +79,8 @@
 		26D65C6825CA8409009F0BBF /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D65C6725CA8409009F0BBF /* UserSession.swift */; };
 		26DAB28725CA8D2700EA88A0 /* AlertBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAB28625CA8D2700EA88A0 /* AlertBar.swift */; };
 		26DAB28C25CA909300EA88A0 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAB28B25CA909300EA88A0 /* Validator.swift */; };
+		26E306EF25EE5141001108AE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E306EE25EE5141001108AE /* LaunchScreenViewController.swift */; };
+		26F0F28625ECDD9800445224 /* ViewAssignedActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F28525ECDD9800445224 /* ViewAssignedActivityViewController.swift */; };
 		26F1631325AC090E00B25F59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1631225AC090E00B25F59 /* AppDelegate.swift */; };
 		26F1631525AC090E00B25F59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1631425AC090E00B25F59 /* SceneDelegate.swift */; };
 		26F1631725AC090E00B25F59 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1631625AC090E00B25F59 /* LoginViewController.swift */; };
@@ -183,6 +185,8 @@
 		26D65C6725CA8409009F0BBF /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		26DAB28625CA8D2700EA88A0 /* AlertBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBar.swift; sourceTree = "<group>"; };
 		26DAB28B25CA909300EA88A0 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		26E306EE25EE5141001108AE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		26F0F28525ECDD9800445224 /* ViewAssignedActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssignedActivityViewController.swift; sourceTree = "<group>"; };
 		26F1630F25AC090E00B25F59 /* ScreenExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F1631225AC090E00B25F59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26F1631425AC090E00B25F59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 		26465D0225AD6979001EAC1B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				26E306ED25EE5129001108AE /* LaunchScreen */,
 				2633C29A25C9BF48002C6E58 /* Setting */,
 				2633C20C25C11D46002C6E58 /* ChildProfile */,
 				2633C1EC25BFDB5D002C6E58 /* Leaderboard */,
@@ -445,6 +450,7 @@
 		26842BA125AEB6CE00241F03 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				26F0F28525ECDD9800445224 /* ViewAssignedActivityViewController.swift */,
 				26842C1E25B16D0000241F03 /* EditActivityViewController.swift */,
 				26465D0325AD699D001EAC1B /* ScheduleViewController.swift */,
 				26842BA325AEB71600241F03 /* SelectActivityViewController.swift */,
@@ -507,6 +513,14 @@
 				26D65C5725CA7A22009F0BBF /* FirebaseAuthManager.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		26E306ED25EE5129001108AE /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				26E306EE25EE5141001108AE /* LaunchScreenViewController.swift */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		26F1630625AC090E00B25F59 = {
@@ -918,6 +932,7 @@
 				26842C0B25B1648500241F03 /* CornerRoundImageView.swift in Sources */,
 				26DAB28725CA8D2700EA88A0 /* AlertBar.swift in Sources */,
 				267F391C25BE9E0D00D2B396 /* EventHandler.swift in Sources */,
+				26E306EF25EE5141001108AE /* LaunchScreenViewController.swift in Sources */,
 				26842C0125B1557000241F03 /* XIBCategoryTwo.swift in Sources */,
 				26DAB28C25CA909300EA88A0 /* Validator.swift in Sources */,
 				2657B86125D58BAE002832F7 /* ChildProfile.swift in Sources */,
@@ -930,6 +945,7 @@
 				2633C29125C9B9D7002C6E58 /* CustomActivityViewController.swift in Sources */,
 				2633C29625C9BB54002C6E58 /* CreateActivityViewController.swift in Sources */,
 				26F1631525AC090E00B25F59 /* SceneDelegate.swift in Sources */,
+				26F0F28625ECDD9800445224 /* ViewAssignedActivityViewController.swift in Sources */,
 				26465D0C25AD6B3D001EAC1B /* RoundedImageView.swift in Sources */,
 				260B14E325B7EB950032F30A /* NotificationManager.swift in Sources */,
 				26465CF325AD60D7001EAC1B /* HomeUITabBarController.swift in Sources */,

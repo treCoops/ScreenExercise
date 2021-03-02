@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,17 +22,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0s-WP-icr">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0s-WP-icr" customClass="CustomRoundedView" customModule="ScreenExercise" customModuleProvider="target">
                         <rect key="frame" x="2" y="2" width="176" height="176"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="uzO-Wq-Xg9">
-                                <rect key="frame" x="53" y="59.5" width="70" height="57"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="UUn-7h-uHm"/>
-                                    <constraint firstAttribute="height" constant="57" id="dXc-XT-CIM"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-j3-L8t">
                                 <rect key="frame" x="132" y="12" width="32" height="32"/>
                                 <constraints>
@@ -40,21 +33,32 @@
                                 </constraints>
                                 <state key="normal" image="add"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round &amp; Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4k-rK-h5y">
-                                <rect key="frame" x="47" y="151.5" width="82" height="15"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round &amp; Round" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4k-rK-h5y">
+                                <rect key="frame" x="57.5" y="135" width="61.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="xYz-r9-7c2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="9"/>
                                 <color key="textColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-MY-PWJ" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="30.5" y="10" width="115" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="QpZ-Cb-mym"/>
+                                    <constraint firstAttribute="width" constant="115" id="nEP-Ug-rqN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ftz-j3-L8t" firstAttribute="top" secondItem="h0s-WP-icr" secondAttribute="top" constant="12" id="IJB-Hs-Mox"/>
-                            <constraint firstItem="uzO-Wq-Xg9" firstAttribute="centerY" secondItem="h0s-WP-icr" secondAttribute="centerY" id="Ner-qS-JuJ"/>
-                            <constraint firstItem="Y4k-rK-h5y" firstAttribute="top" secondItem="uzO-Wq-Xg9" secondAttribute="bottom" constant="35" id="TSr-DU-qsj"/>
-                            <constraint firstItem="uzO-Wq-Xg9" firstAttribute="centerX" secondItem="h0s-WP-icr" secondAttribute="centerX" id="cH9-FT-Dll"/>
-                            <constraint firstItem="Y4k-rK-h5y" firstAttribute="centerX" secondItem="h0s-WP-icr" secondAttribute="centerX" id="qPI-W3-VSe"/>
+                            <constraint firstItem="Y4k-rK-h5y" firstAttribute="centerX" secondItem="h0s-WP-icr" secondAttribute="centerX" id="Yde-YI-7c4"/>
+                            <constraint firstItem="RKc-MY-PWJ" firstAttribute="centerX" secondItem="h0s-WP-icr" secondAttribute="centerX" id="mcA-54-IWd"/>
+                            <constraint firstItem="Y4k-rK-h5y" firstAttribute="top" secondItem="RKc-MY-PWJ" secondAttribute="bottom" constant="5" id="tM1-OF-oJr"/>
                             <constraint firstAttribute="trailing" secondItem="ftz-j3-L8t" secondAttribute="trailing" constant="12" id="vlr-Ux-Vsn"/>
+                            <constraint firstItem="RKc-MY-PWJ" firstAttribute="top" secondItem="h0s-WP-icr" secondAttribute="top" constant="10" id="z98-Ke-5jb"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -68,13 +72,21 @@
                 <constraint firstAttribute="bottom" secondItem="h0s-WP-icr" secondAttribute="bottom" constant="2" id="yT0-Nb-eod"/>
             </constraints>
             <connections>
+                <outlet property="animationView" destination="RKc-MY-PWJ" id="xg4-Rq-suW"/>
+                <outlet property="btnAdd" destination="ftz-j3-L8t" id="qrH-Lp-uUm"/>
+                <outlet property="txtActivityName" destination="Y4k-rK-h5y" id="qwd-pD-M1i"/>
                 <outlet property="viewParent" destination="h0s-WP-icr" id="D1b-fA-lIM"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="RKc-MY-PWJ"/>
+    </designables>
     <resources>
         <image name="add" width="37" height="37"/>
-        <image name="dummy" width="210" height="171"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

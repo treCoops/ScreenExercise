@@ -18,6 +18,8 @@ class ScheduleViewController: UIViewController {
     @IBOutlet weak var cmbInterval: DropDown!
     @IBOutlet weak var tblSchedule: UITableView!
     
+    var alert : UIAlertController!
+    
     let NManager = NotificationManager()
     let EHandler = EventHandler()
     
@@ -34,6 +36,11 @@ class ScheduleViewController: UIViewController {
         
 //        EHandler.checkEventStoreAuthorizationStatus()
 //        EHandler.createRemainder()
+        
+        createAlertDialog()
+        
+//        self.checkChildProfileExistsAndActived()
+        
         
         NManager.requestPermission()
         NManager.showNotification(title: "This is test")
@@ -108,6 +115,25 @@ class ScheduleViewController: UIViewController {
         
     }
     
+    func checkChildProfileExistsAndActived(){
+        let realm = try! Realm()
+        if(realm.objects(ChildProfile.self).count == 0){
+            self.present(alert, animated: true)
+        }
+        
+    }
+    
+    func createAlertDialog() {
+        alert = UIAlertController(title: "Screen Exersice", message: "Pleasse create a child before continue", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Create", style: .default, handler: {_ in
+            if let tabBarController = self.navigationController?.tabBarController  {
+                    tabBarController.selectedIndex = 2
+                }
+        }))
+    
+    }
+    
     func updateArray(timeSlots : [String], isAutoLoad: Bool){
         
         Schedules.removeAll()
@@ -144,6 +170,7 @@ class ScheduleViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.autoFill()
         tblSchedule.reloadData()
+        self.checkChildProfileExistsAndActived()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -172,7 +199,14 @@ extension ScheduleViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         performSegue(withIdentifier: "ScheduleActivityRowAddSegue", sender: self)
+        
+        if(Schedules[indexPath.row].isAssigned){
+            performSegue(withIdentifier: "SeagueViewAssignedTask", sender: self)
+        }else{
+            performSegue(withIdentifier: "ScheduleActivityRowAddSegue", sender: self)
+        }
+        
+         
     }
 }
 
@@ -241,13 +275,14 @@ extension ScheduleViewController {
         if segue.identifier == "ScheduleActivityRowAddSegue" {
 
             if let indexPath = self.tblSchedule.indexPathForSelectedRow {
-                var id: String
-                if (self.tblSchedule == self.searchDisplayController?.searchResultsTableView) {
-                    id = Schedules[indexPath.row].timeSlotId
-                } else {
-                    id = Schedules[indexPath.row].timeSlotId
-                }
-                (segue.destination as! SelectActivityViewController).timeSlotID = id
+                (segue.destination as! SelectActivityViewController).timeSlotID = Schedules[indexPath.row].timeSlotId
+            }
+        }
+        
+        if segue.identifier == "SeagueViewAssignedTask" {
+
+            if let indexPath = self.tblSchedule.indexPathForSelectedRow {
+                (segue.destination as! ViewAssignedActivityViewController).timeSlotID = Schedules[indexPath.row].timeSlotId
             }
         }
     }

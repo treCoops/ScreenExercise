@@ -15,10 +15,15 @@ class CreateActivityViewController: UIViewController  {
     @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var txtActivityNameCount: UILabel!
     
+    var alert : UIAlertController!
+    
     var timeSlotID : String = ""
+    var refDictionary = [String: String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createAlertDialog()
 
         txtDescription.clipsToBounds = true
         txtDescription.layer.cornerRadius = 5
@@ -28,7 +33,7 @@ class CreateActivityViewController: UIViewController  {
         txtDescription.delegate = self
         txtActivityName.delegate = self
         
-        print(timeSlotID)
+     
 
     }
     @IBAction func btnSavePressed(_ sender: UIButton) {
@@ -43,12 +48,16 @@ class CreateActivityViewController: UIViewController  {
             return
         }
         
+        if(UserSession.exists(key: UserSessionKey.ACTIVED_CHILD_ID)){
+            self.present(alert, animated: true)
+        }
+        
         let customActivity = CustomActivity()
         customActivity.activityName = txtActivityName.text!
         customActivity.activityDescription = txtDescription.text!
         customActivity.childId = UserSession.getUserDefault(key: UserSessionKey.ACTIVED_CHILD_ID) ?? ""
         customActivity.timeSlotId = self.timeSlotID
-        
+
         self.add(activity: customActivity)
         
     }
@@ -56,6 +65,17 @@ class CreateActivityViewController: UIViewController  {
     @IBAction func btnBackPressed(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func createAlertDialog() {
+        alert = UIAlertController(title: "Screen Exersice", message: "Pleasse active a child profile before continue", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Go to child profile", style: .default, handler: {_ in
+            if let tabBarController = self.navigationController?.tabBarController  {
+                    tabBarController.selectedIndex = 2
+                }
+        }))
+    
     }
 }
 

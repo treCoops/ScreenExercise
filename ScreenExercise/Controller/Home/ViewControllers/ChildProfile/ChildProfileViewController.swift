@@ -78,13 +78,7 @@ extension ChildProfileViewController {
         if segue.identifier == "ChildProfileItemSegue" {
 
             if let indexPath = self.tblChilds.indexPathForSelectedRow {
-                var id: String
-                if (self.tblChilds == self.searchDisplayController?.searchResultsTableView) {
-                    id = childs[indexPath.row].id
-                } else {
-                    id = childs[indexPath.row].id
-                }
-                (segue.destination as! ViewChildProfileViewController).childID = id
+                (segue.destination as! ViewChildProfileViewController).childID = childs[indexPath.row].id
             }
         }
     }

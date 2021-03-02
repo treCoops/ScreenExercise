@@ -397,12 +397,12 @@
                         <color key="barTintColor" red="0.2341234982" green="0.47132718559999998" blue="0.64609503749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UYg-TE-8Yi"/>
+                        <segue destination="Ncb-tl-3hy" kind="relationship" relationship="rootViewController" id="N56-u7-21y"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjI-Kp-tcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-697" y="138"/>
+            <point key="canvasLocation" x="-857" y="137"/>
         </scene>
         <!--User Registration View Controller-->
         <scene sceneID="85i-HT-9dQ">
@@ -606,6 +606,43 @@
             </objects>
             <point key="canvasLocation" x="2918" y="136"/>
         </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="qpf-3c-J9c">
+            <objects>
+                <viewController id="Ncb-tl-3hy" customClass="LaunchScreenViewController" customModule="ScreenExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n7g-ci-ELX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bXB-uc-2ic">
+                                <rect key="frame" x="81.5" y="243.5" width="212" height="136"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loadin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-M5-0YA">
+                                <rect key="frame" x="162.5" y="592.5" width="50" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZS9-nM-7Gf"/>
+                        <color key="backgroundColor" red="0.13725490200000001" green="0.3411764706" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXB-uc-2ic" firstAttribute="centerX" secondItem="n7g-ci-ELX" secondAttribute="centerX" id="3hv-eU-r61"/>
+                            <constraint firstItem="ZS9-nM-7Gf" firstAttribute="bottom" secondItem="fFf-M5-0YA" secondAttribute="bottom" constant="10" id="9Mo-EW-8O1"/>
+                            <constraint firstItem="bXB-uc-2ic" firstAttribute="centerY" secondItem="n7g-ci-ELX" secondAttribute="centerY" id="Asw-ku-LP1"/>
+                            <constraint firstItem="fFf-M5-0YA" firstAttribute="centerX" secondItem="n7g-ci-ELX" secondAttribute="centerX" id="mYH-JD-TtN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mfl-X1-7S9"/>
+                    <connections>
+                        <outlet property="txtLoadingStatus" destination="fFf-M5-0YA" id="aT9-9M-NVR"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="4aH-rv-nOI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXn-Pj-ROc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-801"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="irt-YQ-JWk"/>
@@ -615,6 +652,7 @@
         <image name="button_facebook" width="1002" height="156"/>
         <image name="button_google" width="1002" height="156"/>
         <image name="camera" width="20" height="18"/>
+        <image name="main_logo" width="212" height="136"/>
         <image name="profilePicDummy" width="90" height="90"/>
     </resources>
 </document>

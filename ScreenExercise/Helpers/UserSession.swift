@@ -37,4 +37,8 @@ class UserSession {
         return UserDefaults.standard.integer(forKey: key) 
     }
     
+    static func exists(key: String) -> Bool {
+        return UserDefaults.standard.object(forKey: key) == nil
+    }
+    
 }

@@ -131,6 +131,10 @@ class APIHelper{
         
         let url = "\(BaseURL)/api/category/all"
         
+        var categoryCount : Int = 0
+        var activityCount : Int = 0
+        var activityLoadingCount = 0
+        
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .validate()
             .responseJSON(completionHandler: { (response) in
@@ -140,11 +144,11 @@ class APIHelper{
                         self.clearTableCategory()
                         self.clearTableActivity()
                         if let body = json["body"].arrayObject{
+                            categoryCount = body.count
                             for cate in body {
                                 guard let innerDict = cate as? [String: Any] else {
                                     continue
                                 }
-                                
                                 let category = Category()
                                 category.id = innerDict["id"] as! Int
                                 category.name = innerDict["name"] as! String
@@ -161,11 +165,11 @@ class APIHelper{
                                 let activities = JSON(innerDict["activities"]!)
                                 
                                 if let act = activities.arrayObject{
+                                    activityCount = activityCount + act.count
                                     for activity in act {
                                         guard let innerDict = activity as? [String: Any] else {
                                             continue
                                         }
-                                        
                                         DispatchQueue.main.async{
                                             
                                             let destination: DownloadRequest.Destination = { _, _ in
@@ -193,6 +197,7 @@ class APIHelper{
                                                     try! realm.write{
                                                         realm.add(activity)
                                                         print("Activity cached success!")
+                                                        activityLoadingCount = activityLoadingCount + 1
                                                     }
                                                     
                                                 }
@@ -202,6 +207,8 @@ class APIHelper{
                                     }
                                 }
                             }
+                            
+                            self.delagate?.refreshStatus(categoryCount: categoryCount, activityCount: activityCount, activityLoadingCount: activityLoadingCount)
                             
                         }
                     case .failure(let error):
@@ -245,6 +252,7 @@ protocol API {
     func response(status: Int, message: String, user: User)
     func error(error: Error)
     func error(error: String)
+    func refreshStatus(categoryCount: Int, activityCount: Int, activityLoadingCount: Int)
     
 }
 
@@ -254,4 +262,5 @@ extension API {
     func response(status: Int, message: String, user: User){}
     func error(error: Error){}
     func error(error: String){}
+    func refreshStatus(categoryCount: Int, activityCount: Int, activityLoadingCount: Int){}
 }

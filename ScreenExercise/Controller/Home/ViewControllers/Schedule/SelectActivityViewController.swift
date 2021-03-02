@@ -115,13 +115,7 @@ extension SelectActivityViewController {
         if segue.identifier == "ViewFromSelectActivitySegue" {
 
             if let indexPath = self.tblCustomActivities.indexPathForSelectedRow {
-                var id: String
-                if (self.tblCustomActivities == self.searchDisplayController?.searchResultsTableView) {
-                    id = customActivities[indexPath.row].id
-                } else {
-                    id = customActivities[indexPath.row].id
-                }
-                (segue.destination as! CustomActivityViewController).activityID = id
+                (segue.destination as! CustomActivityViewController).activityID = customActivities[indexPath.row].id
             }
         }
         
@@ -130,7 +124,13 @@ extension SelectActivityViewController {
         }
         
         if segue.identifier == "ActivitySegue" {
-            (segue.destination as! SelectActivityTwoViewController).timeSlotID = self.timeSlotID
+
+            
+            if let indexPath = self.categoryColloctionView.indexPathsForSelectedItems?.first {
+                
+                (segue.destination as! SelectActivityTwoViewController).refDictionary = ["timeSlotID": self.timeSlotID, "categoryID": categories[indexPath.row].id]
+            }
+            
         }
     }
 }
