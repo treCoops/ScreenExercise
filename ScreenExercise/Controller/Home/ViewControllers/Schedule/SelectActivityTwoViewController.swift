@@ -191,7 +191,7 @@ extension SelectActivityTwoViewController {
             
             if let indexPath = self.colCategory.indexPathsForSelectedItems?.first {
                 
-                (segue.destination as! ActivityViewController).refDictionary = ["CategoryID": self.refDictionary["categoryID"] ?? "", "activityID": categories[indexPath.row].id]
+                (segue.destination as! ActivityViewController).refDictionary = ["CategoryID": self.refDictionary["categoryID"] ?? "", "activityID": categories[indexPath.row].id, "timeSlotID": self.refDictionary["timeSlotID"] ?? ""]
             }
         }
     }

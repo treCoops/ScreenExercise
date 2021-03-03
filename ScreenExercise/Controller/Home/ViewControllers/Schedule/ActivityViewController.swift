@@ -23,24 +23,32 @@ class ActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.getActivityData(id: self.refDictionary["activityID"] as! Int, categoryID: self.refDictionary["CategoryID"] as! Int)
+        self.getActivityData(id: self.refDictionary["activityID"] as! Int, categoryID: self.refDictionary["CategoryID"] as! Int, status: true)
 
     }
     @IBAction func btnBackPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func getActivityData(id: Int, categoryID: Int){
+    func getActivityData(id: Int, categoryID: Int, status: Bool){
 
         let realm = try! Realm()
 
         let eventResults = realm.objects(Activity.self).filter("id == \(id) AND category_id == \(categoryID)")
         
-        txtActivityTitle.text = eventResults.first!.name
-        txtActivityDescription.text = eventResults.first!.des
+        if(status){
+            txtActivityTitle.text = eventResults.first!.name
+            txtActivityDescription.text = eventResults.first!.des
 
-        self.loadLottie(fileName: eventResults.first!.fileName)
-
+            self.loadLottie(fileName: eventResults.first!.fileName)
+        }else{
+            
+            let category = realm.objects(Category.self).filter("id == \(categoryID)")
+            
+            updateTimeSlot(category: category.first!.name, activity: eventResults.first!.name, activityID: String(id))
+            
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,11 +56,12 @@ class ActivityViewController: UIViewController {
         animationView!.play()
     }
     
+    @IBAction func btnAddPressed(_ sender: UIButton) {
+        self.getActivityData(id: self.refDictionary["activityID"] as! Int, categoryID: self.refDictionary["CategoryID"] as! Int, status: false)
+        
+    }
     
     func loadLottie(fileName: String){
-        
-        
-        
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
            let url = NSURL(fileURLWithPath: path)
         if let pathComponent = url.appendingPathComponent("ScreenExercise/\(fileName)") {
@@ -76,6 +85,21 @@ class ActivityViewController: UIViewController {
                print("FILE PATH NOT AVAILABLE")
            }
     }
-    
-    
+}
+
+extension ActivityViewController{
+    func updateTimeSlot(category:String, activity : String, activityID: String){
+        let realm = try! Realm()
+        
+        let result = realm.objects(ChildTimeSlot.self).filter("timeID = %@ AND childID = %@", self.refDictionary["timeSlotID"] ?? "", UserSession.getUserDefault(key: UserSessionKey.ACTIVED_CHILD_ID) ?? "")
+        
+        if let timeSlot = result.first {
+            try! realm.safeWrite {
+                timeSlot.completeStatus = "Pending"
+                timeSlot.isAssigned = true
+                timeSlot.task = "\(category) > \(activity)"
+                timeSlot.activityID = activityID
+            }
+        }
+    }
 }

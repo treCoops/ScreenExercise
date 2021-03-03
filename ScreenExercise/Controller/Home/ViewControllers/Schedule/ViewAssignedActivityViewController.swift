@@ -66,13 +66,18 @@ class ViewAssignedActivityViewController: UIViewController {
     }
     
     func fillForm(){
+        
+        print(timeSlotID)
+        
         let realm = try! Realm()
         activity = realm.objects(CustomActivity.self).filter("timeSlotId == %@", self.timeSlotID)
         
-        customActivity = activity.first!
+        print(activity)
         
-        txtActivityTitle.text = customActivity.activityName
-        txtActivityDescription.text = customActivity.activityDescription
+//        customActivity = activity.first!
+//
+//        txtActivityTitle.text = customActivity.activityName
+//        txtActivityDescription.text = customActivity.activityDescription
     }
     
 }
