@@ -6,19 +6,30 @@
 //
 
 import UIKit
+import Firebase
 
 class PhoneNumberViewController: UIViewController {
     
     @IBOutlet weak var txtPhoneNumber: UITextField!
     
     var firebaseAuthManager = FirebaseAuthManager()
+    var indicatorHUD : IndicatorHUD!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        indicatorHUD = IndicatorHUD(view: view)
         txtPhoneNumber.delegate = self
-
         firebaseAuthManager.delagate = self
+        
+        
+        
+        
+        let user = Auth.auth().currentUser
+        
+        if user != nil {
+            performSegue(withIdentifier: "SagueToLoginFromPhoneNumber", sender: self)
+        }
         
     }
     
@@ -27,8 +38,6 @@ class PhoneNumberViewController: UIViewController {
     }
     
     @IBAction func btnContinuePressed(_ sender: UIButton) {
-        
-        performSegue(withIdentifier: "PhoneToOTPSegue", sender: self)
         
         if(Validator.isEmpty(txtPhoneNumber.text ?? "")){
             AlertBar.danger(title: "Please enter your phone number.")
@@ -39,7 +48,7 @@ class PhoneNumberViewController: UIViewController {
             AlertBar.danger(title: "Please enter valid phone number.")
             return
         }
-
+        indicatorHUD.show()
         firebaseAuthManager.signUpViaPhoneNumber(phoneNumber: txtPhoneNumber.text ?? "")
     }
     
@@ -62,11 +71,12 @@ extension PhoneNumberViewController : FirebaseActions {
     
     func numberVerificationSuccess(verificationID: String) {
         UserSession.setAuthVerificationID(data: verificationID, key: UserSessionKey.KEY_VERIFICATION_ID)
-        
+        indicatorHUD.hide()
         performSegue(withIdentifier: "PhoneToOTPSegue", sender: self)
     }
     
     func numberVerificationFailed(error: Error) {
+        indicatorHUD.hide()
         if(error.localizedDescription == "TOO_SHORT"){
             AlertBar.danger(title: "Invalid Phone Number")
         }

@@ -33,8 +33,6 @@ class AddChildProfileViewController: UIViewController, UINavigationControllerDel
         txtChildName.delegate = self
         
         imagePicker.delegate = self
-        
-        
         createAlertDialog()
        
 

@@ -25,14 +25,27 @@ class APIHelper{
             "comments": comments,
             "provider": provider
         ]
+        
+        let header: HTTPHeaders = [
+            "Content-Type": "application/json",
+            "accept": "application/json"
+        ]
          
-        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil)
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: header)
             .validate(statusCode: 200..<600)
             .responseJSON(completionHandler: { (response) in
                 switch response.result {
                     case .success(let value):
                         let json = JSON(value)
-                        self.delagate?.response(status: json["status"].int ?? 0, message: json["message"].string ?? "asd")
+                        let obj = json["body"].dictionaryObject
+                        if(obj != nil){
+                            let userProfile : User = User(provider: obj!["provider"] as? String ?? "", phone: obj!["phone"] as? String ?? "", updatedAt: obj!["updatedAt"] as? String ?? "", status: obj!["status"] as? Int ?? 1, type: obj!["type"] as? Int ?? 1, token: obj!["token"] as? String ?? "", name: obj!["name"] as? String ?? "", email: obj!["email"] as? String ?? "", id: obj!["id"] as? Int ?? 1, comments: obj!["comments"] as? String ?? "", joinDate: obj!["joinDate"] as? String ?? "")
+                            
+                            self.delagate?.response(status: json["status"].int ?? 0, message: json["message"].string ?? "no message found", user: userProfile)
+                        }else{
+                            self.delagate?.error(error: "No user profile exists")
+                        }
+//                        self.delagate?.response(status: json["status"].int ?? 0, message: json["message"].string ?? "asd")
 
                     case .failure(let error):
                         print(error)

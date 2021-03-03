@@ -28,11 +28,21 @@ class LoginViewController: UIViewController {
         
         apiHelper.delagate = self
         
+        let user = Auth.auth().currentUser
+        
+        if user != nil{
+            if !UserSession.exists(key: UserSessionKey.USER_LOGGED){
+                if (UserSession.getUserDefaultBool(key: UserSessionKey.USER_LOGGED)!){
+                    performSegue(withIdentifier: "SegueToHome", sender: self)
+                }
+            }
+        }
+        
 //        apiHelper.createUser(name: "test", email: "trevogayan@gmail.com", phone: "0777123456", type: "1", comments: "This is test", provider: "Dialog")
 //        apiHelper.getAllUsers()
 //        apiHelper.updateUser(token: "4", name: "Somasiri", email: "somaa@gmail.com", phone: "0777777771", provider: "Verizon")
 //        apiHelper.getUserDetails(token: "4")
-        apiHelper.getCategories()
+//        apiHelper.getCategories()
 //        apiHelper.getActivities()
         
     }

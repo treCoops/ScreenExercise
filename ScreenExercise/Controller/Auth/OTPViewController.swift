@@ -13,10 +13,12 @@ class OTPViewController: UIViewController {
     @IBOutlet weak var txtOTP: UITextField!
     
     var firebaseAuthManager = FirebaseAuthManager()
+    var indicatorHUD : IndicatorHUD!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        indicatorHUD = IndicatorHUD(view: view)
         txtOTP.delegate = self
 
         firebaseAuthManager.delagate = self
@@ -41,6 +43,8 @@ class OTPViewController: UIViewController {
             return
         }
         
+        indicatorHUD.show()
+        
         firebaseAuthManager.signInViaPhoneNumber(verificationID: UserSession.getUserDefault(key: UserSessionKey.KEY_VERIFICATION_ID)!, verificationCode: txtOTP.text!)
     }
     
@@ -63,11 +67,13 @@ extension OTPViewController : UITextFieldDelegate{
 
 extension OTPViewController : FirebaseActions {
     func operationSuccess(msg: String) {
+        indicatorHUD.hide()
         performSegue(withIdentifier: "segueToSignInForm", sender: self)
     }
     
     func operationFailed(error: Error) {
         print(error)
+        indicatorHUD.hide()
         AlertBar.danger(title: error.localizedDescription)
     }
 }

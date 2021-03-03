@@ -80,6 +80,8 @@
 		26DAB28725CA8D2700EA88A0 /* AlertBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAB28625CA8D2700EA88A0 /* AlertBar.swift */; };
 		26DAB28C25CA909300EA88A0 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAB28B25CA909300EA88A0 /* Validator.swift */; };
 		26E306EF25EE5141001108AE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E306EE25EE5141001108AE /* LaunchScreenViewController.swift */; };
+		26E3075925EE6D10001108AE /* lf30_editor_8ryhd5nz.json in Resources */ = {isa = PBXBuildFile; fileRef = 26E3075825EE6D10001108AE /* lf30_editor_8ryhd5nz.json */; };
+		26E3076125EE723D001108AE /* IndicatorHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3076025EE723D001108AE /* IndicatorHUD.swift */; };
 		26F0F28625ECDD9800445224 /* ViewAssignedActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0F28525ECDD9800445224 /* ViewAssignedActivityViewController.swift */; };
 		26F1631325AC090E00B25F59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1631225AC090E00B25F59 /* AppDelegate.swift */; };
 		26F1631525AC090E00B25F59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F1631425AC090E00B25F59 /* SceneDelegate.swift */; };
@@ -186,6 +188,8 @@
 		26DAB28625CA8D2700EA88A0 /* AlertBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBar.swift; sourceTree = "<group>"; };
 		26DAB28B25CA909300EA88A0 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		26E306EE25EE5141001108AE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		26E3075825EE6D10001108AE /* lf30_editor_8ryhd5nz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf30_editor_8ryhd5nz.json; sourceTree = "<group>"; };
+		26E3076025EE723D001108AE /* IndicatorHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorHUD.swift; sourceTree = "<group>"; };
 		26F0F28525ECDD9800445224 /* ViewAssignedActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssignedActivityViewController.swift; sourceTree = "<group>"; };
 		26F1630F25AC090E00B25F59 /* ScreenExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F1631225AC090E00B25F59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -414,6 +418,7 @@
 				26842BB025AEBCD200241F03 /* CustomTextFieldPlaceholder.swift */,
 				26842C0A25B1648500241F03 /* CornerRoundImageView.swift */,
 				26DAB28625CA8D2700EA88A0 /* AlertBar.swift */,
+				26E3076025EE723D001108AE /* IndicatorHUD.swift */,
 			);
 			path = UIClass;
 			sourceTree = "<group>";
@@ -523,6 +528,14 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		26E3074325EE67CA001108AE /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				26E3075825EE6D10001108AE /* lf30_editor_8ryhd5nz.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		26F1630625AC090E00B25F59 = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +561,7 @@
 		26F1631125AC090E00B25F59 /* ScreenExercise */ = {
 			isa = PBXGroup;
 			children = (
+				26E3074325EE67CA001108AE /* Lottie */,
 				26465D2425ADACAA001EAC1B /* Helpers */,
 				268216B825AC16B200E6FF1F /* Font */,
 				268216AC25AC154000E6FF1F /* UIClass */,
@@ -741,6 +755,7 @@
 				2633C21E25C1230A002C6E58 /* ChildProfileTableViewCell.xib in Resources */,
 				268216CC25AC16E300E6FF1F /* Lato-Regular.ttf in Resources */,
 				26F1631C25AC090F00B25F59 /* Assets.xcassets in Resources */,
+				26E3075925EE6D10001108AE /* lf30_editor_8ryhd5nz.json in Resources */,
 				26F1631A25AC090E00B25F59 /* Main.storyboard in Resources */,
 				268216C925AC16E300E6FF1F /* Lato-Italic.ttf in Resources */,
 				268216C525AC16E300E6FF1F /* Lato-BoldItalic.ttf in Resources */,
@@ -941,6 +956,7 @@
 				268216D725AC1CF500E6FF1F /* PhoneNumberViewController.swift in Sources */,
 				26AC302F25DD022B003BEE3E /* ChildTimeSlot.swift in Sources */,
 				26842BB825AEC2F200241F03 /* CategoryCollectionViewCell.swift in Sources */,
+				26E3076125EE723D001108AE /* IndicatorHUD.swift in Sources */,
 				2633C21725C122CD002C6E58 /* XIBChildProfile.swift in Sources */,
 				2633C29125C9B9D7002C6E58 /* CustomActivityViewController.swift in Sources */,
 				2633C29625C9BB54002C6E58 /* CreateActivityViewController.swift in Sources */,

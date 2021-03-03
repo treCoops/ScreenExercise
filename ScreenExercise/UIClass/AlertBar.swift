@@ -18,7 +18,7 @@ class AlertBar{
     
     static func danger(title: String){
         let banner = StatusBarNotificationBanner(title: title, style: .danger)
-        banner.duration = 4
+        banner.duration = 2
         banner.show()
     }
     

@@ -17,6 +17,10 @@ class UserSession {
         return UserDefaults.standard.string(forKey: key)
     }
     
+    static func getUserDefaultBool(key: String) -> Bool? {
+        return UserDefaults.standard.bool(forKey: key)
+    }
+    
     static func set(data: Bool, key: String){
         UserDefaults.standard.set(data, forKey: key)
     }

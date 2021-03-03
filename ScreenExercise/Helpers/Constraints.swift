@@ -57,4 +57,7 @@ struct UserSessionKey {
     
     static var ACTIVED_CHILD_ID = "ACTIVED_CHILD_ID"
     
+    static var USER_API_ID = "USER_API_ID"
+    static var USER_LOGGED = "USER_LOGGED"
+    
 }

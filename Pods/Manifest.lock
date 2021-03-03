@@ -22,29 +22,29 @@ PODS:
     - FBSDKLoginKit/Login (= 5.15.1)
   - FBSDKLoginKit/Login (5.15.1):
     - FBSDKCoreKit (~> 5.0)
-  - Firebase/Auth (7.6.0):
+  - Firebase/Auth (7.7.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (~> 7.6.0)
-  - Firebase/CoreOnly (7.6.0):
-    - FirebaseCore (= 7.6.0)
-  - Firebase/Storage (7.6.0):
+    - FirebaseAuth (~> 7.7.0)
+  - Firebase/CoreOnly (7.7.0):
+    - FirebaseCore (= 7.7.0)
+  - Firebase/Storage (7.7.0):
     - Firebase/CoreOnly
-    - FirebaseStorage (~> 7.6.0)
-  - FirebaseAuth (7.6.0):
+    - FirebaseStorage (~> 7.7.0)
+  - FirebaseAuth (7.7.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
-  - FirebaseCore (7.6.0):
+  - FirebaseCore (7.7.0):
     - FirebaseCoreDiagnostics (~> 7.4)
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
-  - FirebaseCoreDiagnostics (7.6.0):
+  - FirebaseCoreDiagnostics (7.7.0):
     - GoogleDataTransport (~> 8.0)
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30907.0)
-  - FirebaseStorage (7.6.0):
+  - FirebaseStorage (7.7.0):
     - FirebaseCore (~> 7.0)
     - GTMSessionFetcher/Core (~> 1.4)
   - GoogleDataTransport (8.2.0):
@@ -89,11 +89,11 @@ PODS:
     - MarqueeLabel (~> 4.0.5)
     - SnapKit (~> 5.0.1)
   - PromisesObjC (1.2.12)
-  - Realm (10.6.0):
-    - Realm/Headers (= 10.6.0)
-  - Realm/Headers (10.6.0)
-  - RealmSwift (10.6.0):
-    - Realm (= 10.6.0)
+  - Realm (10.7.0):
+    - Realm/Headers (= 10.7.0)
+  - Realm/Headers (10.7.0)
+  - RealmSwift (10.7.0):
+    - Realm (= 10.7.0)
   - SnapKit (5.0.1)
   - SwiftyJSON (4.3.0)
 
@@ -153,11 +153,11 @@ SPEC CHECKSUMS:
   FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
   FBSDKLoginKit: f1ea8026a58b52d30c9f2e6a58ca7d813619fb83
-  Firebase: e1e089d9aac215a52442583f818ab61de3c4581b
-  FirebaseAuth: 0a1df88dc32569db509e6269c3e4bf2a168e8ae8
-  FirebaseCore: 0a43b7f1c5b36f3358cd703011ca4c7e0df55870
-  FirebaseCoreDiagnostics: ee1184d51da3293335b83355aad20f537acc24cf
-  FirebaseStorage: 47890c9607e58b3046f072538c8c1ca4db2b0940
+  Firebase: cd2ab85eec8170dc260186159f21072ecb679ad5
+  FirebaseAuth: 76aa97ecd51e20ecd21321d08474d25f5d2b7b9f
+  FirebaseCore: ac35d680a0bf32319a59966a1478e0741536b97b
+  FirebaseCoreDiagnostics: 179bf3831213451c8addd036aca7fcf5492ec154
+  FirebaseStorage: 9b940765fa33494258fab6131b6180fc7c2d80f5
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
@@ -170,8 +170,8 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   NotificationBannerSwift: 7021be2338f8f29cf424b0aca43da462bf9e2a1a
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  Realm: 1ef421d4581513400ad4f8bd39c8157f3266c62e
-  RealmSwift: f80216fb8334b01ccf526e4f2dd5ff0da61863a2
+  Realm: a03c41a3afbda6c197ba4dfba5428b8b54cc2df4
+  RealmSwift: 5e7abc842276d7fabd386e67afbf3efde54eb1c6
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 

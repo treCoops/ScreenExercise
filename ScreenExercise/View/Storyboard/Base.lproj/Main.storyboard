@@ -47,7 +47,7 @@
                                             <color key="titleColor" red="0.0039215686274509803" green="0.086274509803921567" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vgA-IC-ccK" kind="show" id="lEp-ru-bNI"/>
+                                            <segue destination="vgA-IC-ccK" kind="show" id="ZF3-BG-xot"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWw-Jk-j34" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
@@ -61,7 +61,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="6zZ-ft-Zva" kind="show" id="ayP-da-dvi"/>
+                                            <segue destination="6zZ-ft-Zva" kind="show" identifier="SegueToHome" id="XwR-Cq-vcf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.0" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k26-t2-KgG" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
@@ -140,16 +140,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a3P-Ip-los">
-                                <rect key="frame" x="40" y="295" width="295" height="81.5"/>
+                                <rect key="frame" x="40" y="295" width="295" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-Tn-zcv">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.9882352941176471" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+94777123456" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kbi-5v-LSh" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29.5" width="295" height="52"/>
+                                        <rect key="frame" x="0.0" y="29" width="295" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="Kf8-lf-OPh"/>
                                         </constraints>
@@ -159,7 +159,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Um3-2L-7AQ" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="40" y="396.5" width="295" height="52"/>
+                                <rect key="frame" x="40" y="396" width="295" height="52"/>
                                 <color key="backgroundColor" red="0.019607843137254902" green="0.6588235294117647" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="vPg-ZH-QdG"/>
@@ -190,6 +190,7 @@
                     <connections>
                         <outlet property="txtPhoneNumber" destination="kbi-5v-LSh" id="191-1q-Iha"/>
                         <segue destination="ECz-W4-yUM" kind="show" identifier="PhoneToOTPSegue" id="QoG-xN-aEL"/>
+                        <segue destination="ZRy-gc-PL8" kind="show" identifier="SagueToLoginFromPhoneNumber" id="G4t-kh-NjQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MqO-vc-8jU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,16 +213,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mmk-JG-4Ki">
-                                <rect key="frame" x="40" y="295" width="295" height="81.5"/>
+                                <rect key="frame" x="40" y="295" width="295" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgd-h8-8AK">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="19"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gon-lb-0wW" customClass="RoundedUITextField" customModule="ScreenExercise" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="29.5" width="295" height="52"/>
+                                        <rect key="frame" x="0.0" y="29" width="295" height="52"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="8tw-7Y-vor"/>
                                         </constraints>
@@ -231,7 +232,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnn-8d-Nra" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="40" y="396.5" width="295" height="52"/>
+                                <rect key="frame" x="40" y="396" width="295" height="52"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="zYS-06-VH9"/>
@@ -245,22 +246,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ve sent an One Time Password (OTP) to the number you provided." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8R-zn-Y1Q">
-                                <rect key="frame" x="40" y="468.5" width="295" height="38.5"/>
+                                <rect key="frame" x="40" y="468" width="295" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-21" translatesAutoresizingMaskIntoConstraints="NO" id="qRu-NH-LHS">
-                                <rect key="frame" x="40" y="502" width="186" height="32"/>
+                                <rect key="frame" x="40" y="500.5" width="193" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t receive?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l89-co-YGw">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="31"/>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                         <color key="textColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuA-nX-2an">
-                                        <rect key="frame" x="82.5" y="0.0" width="103.5" height="32"/>
+                                        <rect key="frame" x="86" y="0.0" width="107" height="31"/>
                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                         <state key="normal" title="Resend">
                                             <color key="titleColor" red="0.019607843140000001" green="0.6588235294" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -426,6 +427,9 @@
                                     <constraint firstAttribute="width" constant="20" id="q27-5o-8Vy"/>
                                 </constraints>
                                 <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="btnImagePressed:" destination="ZRy-gc-PL8" eventType="touchUpInside" id="1eh-Wf-Lke"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-tl-EZx">
                                 <rect key="frame" x="20" y="261.5" width="335" height="81.5"/>
@@ -442,7 +446,7 @@
                                             <constraint firstAttribute="height" constant="52" id="IHp-a1-5EQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -466,7 +470,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-eC-BM5" customClass="RoundedUIButton" customModule="ScreenExercise" customModuleProvider="target">
-                                <rect key="frame" x="20" y="544" width="335" height="52"/>
+                                <rect key="frame" x="20" y="519.5" width="335" height="52"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.65098039220000004" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Blv-W2-CbY"/>
@@ -476,7 +480,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fhi-Rb-pIm" kind="show" id="LPw-bA-1pS"/>
+                                    <action selector="btnContinuePressed:" destination="ZRy-gc-PL8" eventType="touchUpInside" id="LQf-iR-axO"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ufp-XF-Re4">
@@ -494,103 +498,30 @@
                                             <constraint firstAttribute="height" constant="52" id="7Y4-8X-7eY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2i0-ke-uV7">
-                                <rect key="frame" x="20" y="464.5" width="335" height="54.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-0s-F5O">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pi-Nq-Fj1">
-                                        <rect key="frame" x="0.0" y="24.5" width="335" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edg-47-aj7" customClass="DLRadioButton">
-                                                <rect key="frame" x="0.0" y="0.5" width="60" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="7u7-6n-Aqc"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                                <state key="normal" title="Male">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                        <color key="value" red="0.8862745098" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
-                                                        <color key="value" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="106-VL-HPi" customClass="DLRadioButton">
-                                                <rect key="frame" x="70" y="0.5" width="100" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gQt-8j-6ni"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                                <state key="normal" title="Female">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
-                                                        <color key="value" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
-                                                        <color key="value" red="0.8862745098" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.13725490200000001" green="0.3411764706" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="106-VL-HPi" secondAttribute="trailing" constant="20" symbolic="YES" id="PoY-qt-9kh"/>
-                                            <constraint firstAttribute="height" constant="30" id="WH4-Kx-EPF"/>
-                                            <constraint firstItem="106-VL-HPi" firstAttribute="centerY" secondItem="4pi-Nq-Fj1" secondAttribute="centerY" id="WyU-mj-Cf0"/>
-                                            <constraint firstItem="Edg-47-aj7" firstAttribute="leading" secondItem="4pi-Nq-Fj1" secondAttribute="leading" id="mfN-4Z-h6d"/>
-                                            <constraint firstItem="Edg-47-aj7" firstAttribute="centerY" secondItem="4pi-Nq-Fj1" secondAttribute="centerY" id="oEm-f6-KdN"/>
-                                            <constraint firstItem="106-VL-HPi" firstAttribute="leading" secondItem="Edg-47-aj7" secondAttribute="trailing" constant="10" id="uIA-VW-K51"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AsQ-hJ-7zt"/>
                         <color key="backgroundColor" red="0.13725490200000001" green="0.3411764706" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2i0-ke-uV7" firstAttribute="top" secondItem="ufp-XF-Re4" secondAttribute="bottom" constant="20" id="4A8-Gz-JzT"/>
+                            <constraint firstItem="I0E-O8-Eew" firstAttribute="centerX" secondItem="12L-4F-xfu" secondAttribute="centerX" id="18R-7K-Z7O"/>
                             <constraint firstItem="ufp-XF-Re4" firstAttribute="top" secondItem="xDK-tl-EZx" secondAttribute="bottom" constant="20" id="9Kr-Go-lOe"/>
                             <constraint firstItem="ufp-XF-Re4" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="AcC-iq-lgL"/>
-                            <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="2i0-ke-uV7" secondAttribute="trailing" constant="20" id="DLu-Rk-Gm8"/>
                             <constraint firstItem="xDK-tl-EZx" firstAttribute="top" secondItem="uhT-gr-bmz" secondAttribute="bottom" constant="20" id="Ek9-Mz-mgg"/>
-                            <constraint firstItem="I0E-O8-Eew" firstAttribute="centerX" secondItem="VKN-9l-TgK" secondAttribute="centerX" id="Jfg-Iz-4pu"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="ufp-XF-Re4" secondAttribute="trailing" constant="20" id="MuY-34-WhG"/>
                             <constraint firstItem="I0E-O8-Eew" firstAttribute="top" secondItem="AsQ-hJ-7zt" secondAttribute="top" constant="75" id="RJg-Bn-30y"/>
                             <constraint firstItem="Wen-eC-BM5" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="Yvk-H1-QyI"/>
                             <constraint firstItem="uhT-gr-bmz" firstAttribute="top" secondItem="12L-4F-xfu" secondAttribute="bottom" constant="30" id="b8Z-3F-VkA"/>
-                            <constraint firstItem="2i0-ke-uV7" firstAttribute="top" secondItem="ufp-XF-Re4" secondAttribute="bottom" constant="20" id="ehh-Zs-UFU"/>
                             <constraint firstItem="uhT-gr-bmz" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="jdu-xC-HOT"/>
-                            <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="2i0-ke-uV7" secondAttribute="trailing" constant="20" id="kbL-lq-YRq"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="uhT-gr-bmz" secondAttribute="trailing" constant="20" id="ngZ-xT-xfc"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="xDK-tl-EZx" secondAttribute="trailing" constant="20" id="p3z-8y-R14"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="Wen-eC-BM5" secondAttribute="trailing" constant="20" id="tQ1-Hb-8RT"/>
+                            <constraint firstItem="Wen-eC-BM5" firstAttribute="top" secondItem="ufp-XF-Re4" secondAttribute="bottom" constant="75" id="uuf-YZ-KrO"/>
                             <constraint firstItem="12L-4F-xfu" firstAttribute="top" secondItem="AsQ-hJ-7zt" secondAttribute="top" constant="40" id="vpe-SW-01z"/>
                             <constraint firstItem="AsQ-hJ-7zt" firstAttribute="trailing" secondItem="ufp-XF-Re4" secondAttribute="trailing" constant="20" id="wJP-Ma-gfZ"/>
-                            <constraint firstItem="Wen-eC-BM5" firstAttribute="top" secondItem="2i0-ke-uV7" secondAttribute="bottom" constant="25" id="wix-M9-mjG"/>
-                            <constraint firstItem="2i0-ke-uV7" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="wuL-Wh-gtr"/>
                             <constraint firstItem="ufp-XF-Re4" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="xqc-MB-n1f"/>
-                            <constraint firstItem="2i0-ke-uV7" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="xwD-jy-cTf"/>
                             <constraint firstItem="xDK-tl-EZx" firstAttribute="leading" secondItem="AsQ-hJ-7zt" secondAttribute="leading" constant="20" id="yUI-Rb-u8X"/>
                             <constraint firstItem="12L-4F-xfu" firstAttribute="centerX" secondItem="VKN-9l-TgK" secondAttribute="centerX" id="ys2-S5-S2S"/>
                         </constraints>
@@ -600,6 +531,8 @@
                         <outlet property="imgProfile" destination="12L-4F-xfu" id="N3C-ab-JRx"/>
                         <outlet property="txtEmailAddress" destination="5gW-0a-RTO" id="6rL-Md-6PK"/>
                         <outlet property="txtName" destination="5dd-Eh-TDb" id="hjM-3O-8aZ"/>
+                        <outlet property="txtPhoneNumber" destination="xEz-7f-zzu" id="hBq-Qq-Ual"/>
+                        <segue destination="fhi-Rb-pIm" kind="show" identifier="SegueToSubcription" id="hTW-V7-wzN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrg-ts-ZfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -617,26 +550,31 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bXB-uc-2ic">
                                 <rect key="frame" x="81.5" y="243.5" width="212" height="136"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loadin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-M5-0YA">
-                                <rect key="frame" x="162.5" y="592.5" width="50" height="20.5"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.8980392157" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syq-Bl-cju" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="162.5" y="543" width="50" height="100"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.3411764706" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2sn-GX-m0j"/>
+                                    <constraint firstAttribute="height" constant="100" id="kJS-vU-hkv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="lf30_editor_8ryhd5nz"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZS9-nM-7Gf"/>
                         <color key="backgroundColor" red="0.13725490200000001" green="0.3411764706" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="syq-Bl-cju" firstAttribute="centerX" secondItem="n7g-ci-ELX" secondAttribute="centerX" id="2zJ-gA-UoF"/>
                             <constraint firstItem="bXB-uc-2ic" firstAttribute="centerX" secondItem="n7g-ci-ELX" secondAttribute="centerX" id="3hv-eU-r61"/>
-                            <constraint firstItem="ZS9-nM-7Gf" firstAttribute="bottom" secondItem="fFf-M5-0YA" secondAttribute="bottom" constant="10" id="9Mo-EW-8O1"/>
                             <constraint firstItem="bXB-uc-2ic" firstAttribute="centerY" secondItem="n7g-ci-ELX" secondAttribute="centerY" id="Asw-ku-LP1"/>
-                            <constraint firstItem="fFf-M5-0YA" firstAttribute="centerX" secondItem="n7g-ci-ELX" secondAttribute="centerX" id="mYH-JD-TtN"/>
+                            <constraint firstItem="ZS9-nM-7Gf" firstAttribute="bottom" secondItem="syq-Bl-cju" secondAttribute="bottom" constant="-20" id="BIr-p5-hav"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mfl-X1-7S9"/>
                     <connections>
-                        <outlet property="txtLoadingStatus" destination="fFf-M5-0YA" id="aT9-9M-NVR"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="4aH-rv-nOI"/>
+                        <outlet property="animationView" destination="syq-Bl-cju" id="jYD-ZX-d9s"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="SegueToLogin" id="4aH-rv-nOI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RXn-Pj-ROc" userLabel="First Responder" sceneMemberID="firstResponder"/>
