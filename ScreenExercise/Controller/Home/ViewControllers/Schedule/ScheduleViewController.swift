@@ -65,6 +65,7 @@ class ScheduleViewController: UIViewController {
             self.flag = true
             
             UserSession.setString(data: selectedText, key: UserSessionKey.KEY_START_TIME)
+            UserSession.setInt(data: index, key: UserSessionKey.START_TIME_INDEX)
             
             
             self.newTimeArray.removeAll()
@@ -104,7 +105,7 @@ class ScheduleViewController: UIViewController {
             self.clearTableCustomActivity()
             
             if(self.cmbStart.selectedIndex != nil || self.cmbEnd.selectedIndex != nil){
-                self.updateArray(timeSlots:TimeValidator.getTimeIntervaleSlots(startTime: DropdownArray.cmbTime[self.cmbStart.selectedIndex!], endTime: self.selectedTime, interval: DropdownArray.cmbInterval[self.cmbInterval.selectedIndex!]), isAutoLoad: false)
+                self.updateArray(timeSlots:TimeValidator.getTimeIntervaleSlots(startTime: DropdownArray.cmbTime[self.cmbStart.selectedIndex ?? UserSession.getInt(key: UserSessionKey.START_TIME_INDEX)], endTime: self.selectedTime, interval: DropdownArray.cmbInterval[self.cmbInterval.selectedIndex!]), isAutoLoad: false)
             }else {
                 self.updateArray(timeSlots:TimeValidator.getTimeIntervaleSlots(startTime: UserSession.getUserDefault(key: UserSessionKey.KEY_START_TIME)!, endTime: UserSession.getUserDefault(key: UserSessionKey.KEY_END_TIME)!, interval: UserSession.getUserDefault(key: UserSessionKey.KEY_INTERVAL_TIME)!), isAutoLoad: false)
             }

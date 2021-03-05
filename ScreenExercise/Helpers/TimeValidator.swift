@@ -34,7 +34,7 @@ class TimeValidator {
         
         if(diff == 1){
             
-            while(a < 3){
+            while(a < 6){
                 intvalTimeArray.append(DropdownArray.cmbInterval[a])
                 a += 1
             }
@@ -45,7 +45,7 @@ class TimeValidator {
             
             if(diff > 6){
                 
-                while(a < 8 ){
+                while(a < 11 ){
                     self.intvalTimeArray.append(DropdownArray.cmbInterval[a])
                     a += 1
                 }
@@ -54,7 +54,7 @@ class TimeValidator {
                 
             } else if (diff <= 6){
                 
-                while(a < 3 + (diff - 1)){
+                while(a < 6 + (diff - 1)){
                     self.intvalTimeArray.append(DropdownArray.cmbInterval[a])
                     a += 1
                 }
@@ -110,7 +110,7 @@ class TimeValidator {
         
         var mins : Int = IntSlots ?? 30
         
-        if (IntSlots ?? 1 >= 1 && IntSlots ?? 1 <= 6){
+        if (IntSlots ?? 1 >= 1 && IntSlots ?? 1 <= 6 && mins != 5){
             mins = (IntSlots! * 60)
         }
         
